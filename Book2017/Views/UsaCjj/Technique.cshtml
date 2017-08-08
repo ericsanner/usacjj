@@ -1,0 +1,31 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using Book2017.Models
+@using Sitecore.Links
+@model Book2017.Models.ITechnique
+
+<h2 class="technique-title">@Html.Glass().Editable(x => x.Title)</h2>
+
+<div class="technique-description">
+	@Html.Glass().Editable(x => x.Description)
+</div>
+@if (Model.Notes.Trim() != "")
+{
+	<div class="technique-notes">
+		@Html.Glass().Editable(x => x.Notes)
+	</div>
+}
+@if (Model.Tags != null)
+{
+    <div class="tags">
+        <ul>
+            @foreach (ITag tag in Model.Tags)
+            {
+                <li>@tag.Name</li>
+            }
+        </ul>
+    </div>
+}
+
+<div class="returnToSection">
+    <a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
+</div>

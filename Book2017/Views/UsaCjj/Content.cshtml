@@ -21,6 +21,8 @@
     </div>
 }
 
+@Html.Sitecore().Placeholder("extracontent")
+
 <div class="returnToSection">
     <a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
 </div>

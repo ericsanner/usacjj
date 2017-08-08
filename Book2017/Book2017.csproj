@@ -175,6 +175,7 @@
     <Content Include="Views\UsaCjj\Content.cshtml" />
     <Content Include="Views\UsaCjj\Section.cshtml" />
     <Content Include="Views\UsaCjj\Navigation.cshtml" />
+    <Content Include="Views\UsaCjj\IndexAlphabetical.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

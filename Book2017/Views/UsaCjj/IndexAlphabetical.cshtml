@@ -1,0 +1,22 @@
+﻿@using Sitecore.Data.Items
+@using Sitecore.Links
+@model List<Sitecore.Data.Items.Item>
+
+<!--
+    
+Need a separate table for each group
+Each group needs a header
+Each group needs Title / Section column labels
+Style table to be full width?  
+
+-->
+
+<table class="index-data">
+    @foreach (Item itm in Model)
+    {
+        <tr>
+            <td><a href="@LinkManager.GetItemUrl(itm)">@itm.DisplayName</a></td>
+            <td><a href="@LinkManager.GetItemUrl(itm.Parent)">@itm.Parent.DisplayName</a></td>
+        </tr>
+    }
+</table>

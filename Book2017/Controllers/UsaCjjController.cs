@@ -1,11 +1,13 @@
 ﻿using Book2017.Models;
 using Glass.Mapper.Sc.Web.Mvc;
 using Sitecore.Data.Items;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace Book2017.Controllers
 {
-    public class UsaCjjController : GlassController
+	public class UsaCjjController : GlassController
     {
         public ActionResult Navigation()
         {
@@ -40,6 +42,17 @@ namespace Book2017.Controllers
             model.Parent = SitecoreContext.GetCurrentItem<Item>().Parent;
 
             return View("~/Views/UsaCjj/Technique.cshtml", model);
+        }
+
+        public ActionResult IndexAlphabetical()
+        {
+	        Sitecore.Data.Database database = Sitecore.Configuration.Factory.GetDatabase("web");
+	        List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").ToList();
+
+			//sort
+			//remove index pages
+			
+			return View("~/Views/UsaCjj/IndexAlphabetical.cshtml", allItems);
         }
     }
 }

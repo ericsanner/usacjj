@@ -38,29 +38,58 @@ namespace Book2017.Controllers
 
 		public ActionResult Content()
 		{
+			Item current = SitecoreContext.GetCurrentItem<Item>();
 			IContent model = SitecoreContext.GetCurrentItem<IContent>();
-			model.Parent = SitecoreContext.GetCurrentItem<Item>().Parent;
+
+			model.Version = current.Version.Number;
+			model.Updated = current.Statistics.Updated;
+			model.Parent = current.Parent;
 
 			return View("~/Views/UsaCjj/Content.cshtml", model);
 		}
 
 		public ActionResult Technique()
 		{
+			Item current = SitecoreContext.GetCurrentItem<Item>();
 			ITechnique model = SitecoreContext.GetCurrentItem<ITechnique>();
-			model.Parent = SitecoreContext.GetCurrentItem<Item>().Parent;
+
+			model.Version = current.Version.Number;
+			model.Updated = current.Statistics.Updated;
+			model.Parent = current.Parent;
 
 			return View("~/Views/UsaCjj/Technique.cshtml", model);
 		}
+	    public ActionResult IdxPage()
+	    {
+	        IIdxPage model = SitecoreContext.GetCurrentItem<IIdxPage>();
+            
+	        return View("~/Views/UsaCjj/IdxPage.cshtml", model);
+	    }
 
-		public ActionResult IndexAlphabetical()
+        public ActionResult IndexAlphabetical()
 		{
-			Sitecore.Data.Database database = Sitecore.Configuration.Factory.GetDatabase("web");
-			List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").ToList();
+            //get items
+		    Sitecore.Data.Database database = Sitecore.Configuration.Factory.GetDatabase("web");
+		    List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").OrderBy(x => x.DisplayName).ToList();
+		   
+            //create dictionary
+            Dictionary<string, List<Item>> dict = new Dictionary<string, List<Item>>();
 
-			//sort
-			//remove index pages
-			
-			return View("~/Views/UsaCjj/IndexAlphabetical.cshtml", allItems);
+		    for (int i = 65; i < 91; i++)
+		    {
+		        dict.Add(((char)i).ToString(), new List<Item>());
+            }
+
+            //put items into correct location in dictionary
+		    foreach (Item itm in allItems)
+		    {
+		        if (itm.TemplateName != "IdxPage")
+		        {
+		            dict[itm.DisplayName[0].ToString()].Add(itm);
+                }
+		    }
+            
+			return View("~/Views/UsaCjj/IndexAlphabetical.cshtml", dict);
 		}
 	}
 }

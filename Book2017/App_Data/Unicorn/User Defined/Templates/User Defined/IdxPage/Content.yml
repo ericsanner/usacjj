@@ -1,0 +1,14 @@
+﻿---
+ID: "482715de-12cd-4287-a5f5-9bd71d639e83"
+Parent: "6ddc39bc-f35a-4bc7-b371-afc8a6ab5b14"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/User Defined/IdxPage/Content
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170522T021509Z

@@ -23,6 +23,11 @@
 
 @Html.Sitecore().Placeholder("extracontent")
 
+
+<div class="version">
+    Version: @Model.Version Last Updated: @Model.Updated
+</div>
+
 <div class="returnToSection">
     <a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
 </div>

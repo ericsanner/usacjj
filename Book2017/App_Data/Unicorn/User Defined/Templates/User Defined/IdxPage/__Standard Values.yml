@@ -1,8 +1,8 @@
 ﻿---
-ID: "c647e01e-a699-412b-9f55-60f0e1c24ac0"
-Parent: "54f5fbc8-e8e6-4f2f-b217-f6ae90343f94"
-Template: "54f5fbc8-e8e6-4f2f-b217-f6ae90343f94"
-Path: /sitecore/templates/User Defined/Content/__Standard Values
+ID: "94543afd-40d6-4d93-999c-c39cdc836158"
+Parent: "6ddc39bc-f35a-4bc7-b371-afc8a6ab5b14"
+Template: "6ddc39bc-f35a-4bc7-b371-afc8a6ab5b14"
+Path: /sitecore/templates/User Defined/IdxPage/__Standard Values
 DB: master
 SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
@@ -18,9 +18,9 @@ SharedFields:
           ph="nav"
           uid="{C2283E50-0415-4B8C-8234-91CA480ADD3F}" />
         <r
-          id="{EFC4F0EA-BD5E-4C1F-B632-F54C9EA970E3}"
+          id="{CE3A0B82-7B26-46C6-A997-88E5F8D6702C}"
           ph="content"
-          uid="{F28F3217-6217-4A33-BEEA-CE4367CF2FCD}" />
+          uid="{A1A11A42-F731-4B52-B972-1356534937C9}" />
       </d>
     </r>
 Languages:

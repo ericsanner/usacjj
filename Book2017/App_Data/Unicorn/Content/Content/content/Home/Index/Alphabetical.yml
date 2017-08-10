@@ -1,7 +1,7 @@
 ﻿---
 ID: "cedb3912-d618-43a1-82e1-c8fe79761f29"
 Parent: "dfb4e70c-f049-41ff-beef-3a12ba6f8bed"
-Template: "54f5fbc8-e8e6-4f2f-b217-f6ae90343f94"
+Template: "6ddc39bc-f35a-4bc7-b371-afc8a6ab5b14"
 Path: /sitecore/content/Home/Index/Alphabetical
 DB: master
 Languages:
@@ -23,7 +23,7 @@ Languages:
               s:ds=""
               s:id="{327F1FD0-E2CF-463F-9594-9765590C2232}"
               s:par=""
-              s:ph="extracontent" />
+              s:ph="content" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"

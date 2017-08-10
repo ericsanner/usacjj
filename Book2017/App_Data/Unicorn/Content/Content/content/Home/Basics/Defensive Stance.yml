@@ -16,6 +16,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170522T023353Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Description
+      Value: Test editing
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
       Value: Defensive Stance

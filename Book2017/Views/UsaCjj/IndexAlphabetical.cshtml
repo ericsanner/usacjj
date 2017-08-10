@@ -1,6 +1,6 @@
 ﻿@using Sitecore.Data.Items
 @using Sitecore.Links
-@model List<Sitecore.Data.Items.Item>
+@model Dictionary<string, List<Sitecore.Data.Items.Item>>
 
 <!--
     
@@ -10,13 +10,31 @@ Each group needs Title / Section column labels
 Style table to be full width?  
 
 -->
-
-<table class="index-data table-striped">
-    @foreach (Item itm in Model)
+@foreach (var keyValuePair in Model)
+{
+    if (keyValuePair.Value.Count > 0)
     {
-        <tr>
-            <td class="item"><a href="@LinkManager.GetItemUrl(itm)">@itm.DisplayName</a></td>
-            <td class="section"><a href="@LinkManager.GetItemUrl(itm.Parent)">@itm.Parent.DisplayName</a></td>
-        </tr>
+        <div>
+            @keyValuePair.Key
+        </div>
+        <table class="index-data table-striped">
+            <thead>
+            <tr>
+                <td>Title</td>
+                <td>Section</td>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (Item itm in keyValuePair.Value)
+            {
+                <tr>
+                    <td class="item"><a href="@LinkManager.GetItemUrl(itm)">@itm.DisplayName</a></td>
+                    <td class="section"><a href="@LinkManager.GetItemUrl(itm.Parent)">@itm.Parent.DisplayName</a></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        
     }
-</table>
+}
+

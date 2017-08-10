@@ -1,0 +1,14 @@
+﻿---
+ID: "c7d50345-4547-41ba-948b-e2469e1977fd"
+Parent: "639d14e5-021b-4889-8bb6-e4ae85e43a20"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/User Defined/Tag/Content
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170522T015453Z

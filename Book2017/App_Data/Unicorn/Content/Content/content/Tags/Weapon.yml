@@ -1,0 +1,21 @@
+﻿---
+ID: "5883273d-d005-4ed5-97af-fe345f70390e"
+Parent: "fe551d4d-6d9f-4828-822d-f601120026de"
+Template: "639d14e5-021b-4889-8bb6-e4ae85e43a20"
+Path: /sitecore/content/Tags/Weapon
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170522T015605Z
+    - ID: "487b380b-d2c4-4152-9b0d-1ccf5c515650"
+      Hint: Name
+      Value: Weapon
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

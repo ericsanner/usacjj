@@ -1,0 +1,21 @@
+﻿---
+ID: "869fb770-9363-442d-903c-da9b2e1c11d6"
+Parent: "110d559f-dea5-42ea-9c1c-8a5df7e70ef9"
+Template: "8c4b093f-4c46-4f85-b066-febe01254a1f"
+Path: /sitecore/content/Home/Standup
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "22b97c4a-26f5-4825-b73f-a0b006bc8b95"
+      Hint: Title
+      Value: Standup
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170522T021224Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

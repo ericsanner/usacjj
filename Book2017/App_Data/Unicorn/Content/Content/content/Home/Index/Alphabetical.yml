@@ -1,0 +1,34 @@
+﻿---
+ID: "cedb3912-d618-43a1-82e1-c8fe79761f29"
+Parent: "dfb4e70c-f049-41ff-beef-3a12ba6f8bed"
+Template: "54f5fbc8-e8e6-4f2f-b217-f6ae90343f94"
+Path: /sitecore/content/Home/Index/Alphabetical
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{F2BB6D90-D202-40B2-9AC2-7E5F9DED8855}"
+              p:after="*[1=2]"
+              s:ds=""
+              s:id="{327F1FD0-E2CF-463F-9594-9765590C2232}"
+              s:par=""
+              s:ph="extracontent" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170808T152038Z
+    - ID: "987b0b2c-05ab-45f7-bd85-b622c0794991"
+      Hint: Title
+      Value: Alphabetical

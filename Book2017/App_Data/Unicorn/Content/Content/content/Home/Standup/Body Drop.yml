@@ -1,0 +1,39 @@
+﻿---
+ID: "60c88cb8-e7ab-4ac2-b86e-885e4b01b914"
+Parent: "869fb770-9363-442d-903c-da9b2e1c11d6"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/Standup/Body Drop
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170522T023833Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Description
+      Value: |
+        <ol>
+            <li>Attacker right hand <a href="~/link.aspx?_id=F0C22340F6EC41F29A2EC1D59841D606&amp;_z=z">haymaker</a></li>
+            <li>At the same time
+            <ol>
+                <li>Left hand <a href="~/link.aspx?_id=308BC1B5F0A147A6B14868CF61411208&amp;_z=z">block and grab</a></li>
+                <li>Pivot body 180 degrees by stepping forward with right foot to inside of attackers right foot landing with back to attackers chest</li>
+                <li>Pop right shoulder under attackers right armpit</li>
+            </ol>
+            </li>
+            <li>Pull left foot back in circle to take the attacker down</li>
+            <li>Attacker lands on left side</li>
+        </ol>
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Body Drop
+    - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
+      Hint: Tags
+      Type: Multilist
+      Value: |
+        {4FF90F57-EF3F-4CBE-878C-5FECF1CB5039}
+        {072D4265-EE76-4CBB-9DB1-145BEDBCF740}
+        {1BEC36FE-BBC9-423E-9757-7408A9BA9C4A}

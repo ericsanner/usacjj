@@ -1,0 +1,27 @@
+﻿---
+ID: "38d3c3ec-2607-4034-b6f3-1d5c1cf53b88"
+Parent: "0d62902f-2376-44f9-bad4-e9830880544b"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/Basics/Defensive Stance
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-100"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170522T023353Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Defensive Stance
+    - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
+      Hint: Tags
+      Type: Multilist
+      Value: |
+        {4FF90F57-EF3F-4CBE-878C-5FECF1CB5039}
+        {2F6B3781-34A6-4746-9AC7-97793616981B}

@@ -1,0 +1,42 @@
+﻿---
+ID: "f0c22340-f6ec-41f2-9a2e-c1d59841d606"
+Parent: "0d62902f-2376-44f9-bad4-e9830880544b"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/Basics/Haymaker Punch
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170522T022033Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Description
+      Value: |
+        <ol>
+            <li>Left foot <a href="~/link.aspx?_id=38D3C3EC26074034B6F31D5C1CF53B88&amp;_z=z">defensive stance</a></li>
+            <li>At the same time
+            <ul>
+                <li>Right foot steps forward</li>
+                <li>Right fist swings wide aiming for the head</li>
+            </ul>
+            </li>
+        </ol>
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Haymaker Punch
+    - ID: "6d6e772b-9f30-4b90-acdf-9c610b78d321"
+      Hint: Notes
+      Value: This technique is common in bar fights where the attacker is swinging to take your head off your shoulders. &nbsp;If they miss, their momentum will carry them in a circle.
+    - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
+      Hint: Tags
+      Type: Multilist
+      Value: |
+        {4FF90F57-EF3F-4CBE-878C-5FECF1CB5039}
+        {072D4265-EE76-4CBB-9DB1-145BEDBCF740}

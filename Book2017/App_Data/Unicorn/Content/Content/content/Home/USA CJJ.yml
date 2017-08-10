@@ -1,0 +1,25 @@
+﻿---
+ID: "9e7cb971-bdc3-4ab0-bdff-592dbb525c50"
+Parent: "110d559f-dea5-42ea-9c1c-8a5df7e70ef9"
+Template: "8c4b093f-4c46-4f85-b066-febe01254a1f"
+Path: /sitecore/content/Home/USA CJJ
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "22b97c4a-26f5-4825-b73f-a0b006bc8b95"
+      Hint: Title
+      Value: USA CJJ
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170522T021054Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

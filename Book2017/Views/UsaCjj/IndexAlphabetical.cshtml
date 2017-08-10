@@ -1,15 +1,7 @@
 ﻿@using Sitecore.Data.Items
 @using Sitecore.Links
-@model Dictionary<string, List<Sitecore.Data.Items.Item>>
+@model Dictionary<string, List<Item>>
 
-<!--
-    
-Need a separate table for each group
-Each group needs a header
-Each group needs Title / Section column labels
-Style table to be full width?  
-
--->
 @foreach (var keyValuePair in Model)
 {
     if (keyValuePair.Value.Count > 0)
@@ -37,4 +29,3 @@ Style table to be full width?
         
     }
 }
-

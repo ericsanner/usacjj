@@ -1,7 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using Book2017.Models
 @using Sitecore.Links
-@using Sitecore.Web.UI.XslControls
 @model Book2017.Models.IContent
 
 <h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
@@ -20,9 +19,6 @@
         </ul>
     </div>
 }
-
-@Html.Sitecore().Placeholder("extracontent")
-
 
 <div class="version">
     Version: @Model.Version Last Updated: @Model.Updated

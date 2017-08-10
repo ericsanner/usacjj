@@ -49,3 +49,16 @@
 .content {
   height: 100%;
 }
+
+.index-data {
+  width: 75%;
+  border: 1px solid black;
+}
+
+.index-data .item {
+  width: 75%;
+}
+
+.index-data .section {
+  width: 25%;
+}

@@ -1,7 +1,7 @@
 ﻿---
 ID: "110d559f-dea5-42ea-9c1c-8a5df7e70ef9"
 Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
-Template: "76036f5e-cbce-46d1-af0a-4143f9b557aa"
+Template: "78cdbc95-289a-4894-ae8a-3129e1bee363"
 Path: /sitecore/content/Home
 DB: master
 SharedFields:
@@ -91,14 +91,9 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "75577384-3c97-45da-a847-81b00500e250"
+    - ID: "987b0b2c-05ab-45f7-bd85-b622c0794991"
       Hint: Title
       Value: Sitecore
-    - ID: "a60acd61-a6db-4182-8329-c957982cec74"
-      Hint: Text
-      Value: |
-        ><p style="line-height: 22px;">Fra en enkelt forbundet platform, der også integrerer med andre kundevendte platforme, til et enkelt billede af kunden i et stor data marketing repository, der helt eliminere meget af den kompleksitet, der tidligere har holdt marketingfolk tilbage, den nyeste version af Sitecore gør kundeoplevelsen meget nemt opnåeligt. Lær, hvordan den nyeste version af Sitecore giver marketingfolk det komplette overblik, integrerede værktøjer og automatiserings kapaciteter til at engagere kunder i hele den iterativ livscyklus - teknologi fundamentet der er absolut nødvendigt for at vinde kunder for livet.</p>
-        <p>For yderligere oplysninger, kan du gå til <a href="https://doc.sitecore.net/" target="_blank" title="Sitecore Documentation webstedet">Sitecore Documentation webstedet</a></p>
 - Language: "de-DE"
   Fields:
   - ID: "577f1689-7de4-4ad2-a15f-7fdc1759285f"
@@ -120,14 +115,9 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "75577384-3c97-45da-a847-81b00500e250"
+    - ID: "987b0b2c-05ab-45f7-bd85-b622c0794991"
       Hint: Title
       Value: Sitecore Experience Plattform
-    - ID: "a60acd61-a6db-4182-8329-c957982cec74"
-      Hint: Text
-      Value: |
-        <p style="line-height: 22px;">Dank einer einzigen Plattform, die auch andere kundennahe Plattformen integriert, in Verbindung mit einer einheitlichen Ansicht des Kunden im Big Data Repository und einer fast vollständigen Beseitigung der Komplexität, die Vermarkter früher zurückgehalten hat, schafft es die neuste Version von Sitecore, das Kundenerlebnis tatsächlich erreichbar zu machen. Erfahren Sie mehr darüber, wie die neuste Version von Sitecore Vermarktern  vollständige Daten, integrierte Tools und Automatisierungsfähigkeiten zur Kundenbindung in einem durchgehend interaktiven Lebenszyklus liefert. Diese technische Basis ist für eine nachhaltige Kundengewinnung von größter Wichtigkeit.  </p>
-        <p>Weiterführende Informationen finden Sie auf der Dokumentationsseite von Sitecore: <a href="https://doc.sitecore.net/" target="_blank" title="Sitecore-Dokumentationsseite">Sitecore Documentation site</a></p>
 - Language: en
   Fields:
   - ID: "577f1689-7de4-4ad2-a15f-7fdc1759285f"
@@ -148,18 +138,16 @@ Languages:
     - ID: "4c346442-e859-4efd-89b2-44aedf467d21"
       Hint: __Valid to
       Value: 
+    - ID: "5ca576c8-98f6-4bfc-9cef-309d6c75666c"
+      Hint: Content
+      Value: welcome to the usa cjj student manual
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "75577384-3c97-45da-a847-81b00500e250"
+    - ID: "987b0b2c-05ab-45f7-bd85-b622c0794991"
       Hint: Title
-      Value: Sitecore Experience Platform
-    - ID: "a60acd61-a6db-4182-8329-c957982cec74"
-      Hint: Text
-      Value: |
-        <p style="line-height: 22px;">From a single connected platform that also integrates with other customer-facing platforms, to a single view of the customer in a big data marketing repository, to completely eliminating much of the complexity that has previously held marketers back, the latest version of Sitecore makes customer experience highly achievable. Learn how the latest version of Sitecore gives marketers the complete data, integrated tools, and automation capabilities to engage customers throughout an iterative lifecycle &ndash; the technology foundation absolutely necessary to win customers for life.</p>
-        <p>For further information, please go to the <a href="https://doc.sitecore.net/" target="_blank" title="Sitecore Documentation site">Sitecore Documentation site</a></p>
+      Value: Student Manual
     - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
       Hint: __Valid from
       Value: 
@@ -184,12 +172,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "75577384-3c97-45da-a847-81b00500e250"
+    - ID: "987b0b2c-05ab-45f7-bd85-b622c0794991"
       Hint: Title
       Value: サイトコア エクスペリエンス プラットフォームへようこそ
-    - ID: "a60acd61-a6db-4182-8329-c957982cec74"
-      Hint: Text
-      Value: |
-        <p style="line-height: 22px;">サイトコアの最新バージョンでは、複数の消費者向けプラットフォームと統合する単一接続プラットフォームや、マーケティング レポジトリのビッグ データから顧客情報を一目で確認可能なビューを提供し、さらにこれまでマーケターの悩みの種であった多くの複雑性を完全に解消することによって、カスタマー エクスペリエンスの実現が高いレベルで可能になりました。
-        サイトコアの最新バージョンの完全なデータや統合ツール、そしてオートメーション機能を活用することで、反復型のライフ サイクルの中で消費者といかにエンゲージを構築し生涯顧客を獲得できるかを学んでください。生涯顧客を獲得するためにテクノロジーの基盤は不可欠です。</p>
-        <p>詳しくは <a href="https://doc.sitecore.net/" target="_blank" title="Sitecore Documentation site">Sitecore Documentation Site</a> をご参照ください。</p>

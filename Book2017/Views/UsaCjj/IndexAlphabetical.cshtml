@@ -11,12 +11,12 @@ Style table to be full width?
 
 -->
 
-<table class="index-data">
+<table class="index-data table-striped">
     @foreach (Item itm in Model)
     {
         <tr>
-            <td><a href="@LinkManager.GetItemUrl(itm)">@itm.DisplayName</a></td>
-            <td><a href="@LinkManager.GetItemUrl(itm.Parent)">@itm.Parent.DisplayName</a></td>
+            <td class="item"><a href="@LinkManager.GetItemUrl(itm)">@itm.DisplayName</a></td>
+            <td class="section"><a href="@LinkManager.GetItemUrl(itm.Parent)">@itm.Parent.DisplayName</a></td>
         </tr>
     }
 </table>

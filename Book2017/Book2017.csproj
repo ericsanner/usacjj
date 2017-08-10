@@ -205,6 +205,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\IHomePage.cs" />
     <Compile Include="Models\Navigation.cs" />
     <Compile Include="Models\ISection.cs" />
     <Compile Include="Models\ITag.cs" />
@@ -234,6 +235,7 @@
     <Content Include="Views\UsaCjj\Section.cshtml" />
     <Content Include="Views\UsaCjj\Navigation.cshtml" />
     <Content Include="Views\UsaCjj\IndexAlphabetical.cshtml" />
+    <Content Include="Views\UsaCjj\HomePage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

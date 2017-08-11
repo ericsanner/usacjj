@@ -232,7 +232,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\UsaCjj\Section.cshtml" />
     <Content Include="Views\UsaCjj\Navigation.cshtml" />
-    <Content Include="Views\UsaCjj\IndexAlphabetical.cshtml" />
+    <Content Include="Views\UsaCjj\IndexContent.cshtml" />
     <Content Include="Views\UsaCjj\Page.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

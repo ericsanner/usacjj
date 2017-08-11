@@ -1,8 +1,8 @@
 ﻿---
-ID: "cedb3912-d618-43a1-82e1-c8fe79761f29"
+ID: "45225d4b-76a6-4507-a42e-b1625e9c3896"
 Parent: "dfb4e70c-f049-41ff-beef-3a12ba6f8bed"
 Template: "3ed28718-a2c6-41e2-9ada-999074ca637a"
-Path: /sitecore/content/Home/Index/Alphabetical
+Path: /sitecore/content/Home/Index/Section
 DB: master
 Languages:
 - Language: en
@@ -21,7 +21,7 @@ Languages:
               uid="{F2BB6D90-D202-40B2-9AC2-7E5F9DED8855}"
               p:after="*[1=2]"
               s:ds=""
-              s:id="{327F1FD0-E2CF-463F-9594-9765590C2232}"
+              s:id="{D7731401-F741-4DB6-8C8F-B62AB00641ED}"
               s:par=""
               s:ph="extracontent" />
           </d>
@@ -29,13 +29,10 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170808T152038Z
-    - ID: "2658b55c-32c1-4689-ade7-56939c9c04d8"
-      Hint: Title
-      Value: Alphabetical
     - ID: "62c88f06-acc9-49f3-a5b5-02dc049a95e2"
       Hint: Show Parent Link
       Type: Checkbox
       Value: 1
     - ID: "78865559-dfbc-4ce5-ad26-454de23dfcde"
       Hint: Title
-      Value: Alphabetical Index
+      Value: Section Index

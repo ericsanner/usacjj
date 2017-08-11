@@ -1,5 +1,7 @@
 ﻿using Book2017.Models;
 using Glass.Mapper.Sc.Web.Mvc;
+using Sitecore.Collections;
+using Sitecore.Data;
 using Sitecore.Data.Items;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +58,7 @@ namespace Book2017.Controllers
         public ActionResult IndexAlphabetical()
 		{
             //get items
-		    Sitecore.Data.Database database = Sitecore.Configuration.Factory.GetDatabase("web");
+		    Database database = Sitecore.Configuration.Factory.GetDatabase("web");
 		    List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").OrderBy(x => x.DisplayName).ToList();
 		   
             //create dictionary
@@ -76,7 +78,69 @@ namespace Book2017.Controllers
                 }
 		    }
             
-			return View("~/Views/UsaCjj/IndexAlphabetical.cshtml", dict);
+			return View("~/Views/UsaCjj/IndexContent.cshtml", dict);
 		}
-	}
+
+	    public ActionResult IndexSection()
+	    {
+	        //create dictionary
+	        Dictionary<string, List<Item>> dict = new Dictionary<string, List<Item>>();
+            
+            //get sections
+	        Item home = SitecoreContext.GetHomeItem<Item>();
+	        ChildList sections = home.GetChildren();
+
+	        foreach (Item section in sections)
+	        {
+	            dict.Add(section.DisplayName, new List<Item>());
+
+	            ChildList items = section.GetChildren();
+
+	            foreach (Item itm in items)
+	            {
+	                if (itm.TemplateName != "Page")
+	                {
+	                    dict[section.DisplayName].Add(itm);
+	                }
+	            }
+	        }
+            
+	        return View("~/Views/UsaCjj/IndexContent.cshtml", dict);
+	    }
+
+	    public ActionResult IndexTag()
+	    {
+	        //get database
+	        Database database = Sitecore.Configuration.Factory.GetDatabase("web");
+
+	        //get tags
+            List<Item> tags = database.SelectItems("/sitecore/Content/Tags/*").OrderBy(x => x.DisplayName).ToList();
+
+            //get items
+	        List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").OrderBy(x => x.DisplayName).ToList();
+
+	        //create dictionary
+	        Dictionary<string, List<Item>> dict = new Dictionary<string, List<Item>>();
+
+	        foreach(Item tag in tags)
+	        {
+	            dict.Add(tag.DisplayName, new List<Item>());
+	        }
+
+	        //put items into correct location in dictionary
+	        foreach (Item itm in allItems)
+	        {
+	            if (itm.TemplateName != "Page")
+	            {
+	                IContent contentItem = SitecoreContext.GetItem<IContent>(itm.ID.Guid);
+	                foreach (ITag t in contentItem.Tags)
+	                {
+	                    dict[t.Name].Add(itm);
+                    }
+	            }
+	        }
+
+            return View("~/Views/UsaCjj/IndexContent.cshtml", dict);
+	    }
+    }
 }

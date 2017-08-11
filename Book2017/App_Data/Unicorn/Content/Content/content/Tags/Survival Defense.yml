@@ -1,0 +1,17 @@
+﻿---
+ID: "788ec123-a4bf-47b4-9972-665e5eec1d5f"
+Parent: "fe551d4d-6d9f-4828-822d-f601120026de"
+Template: "639d14e5-021b-4889-8bb6-e4ae85e43a20"
+Path: /sitecore/content/Tags/Survival Defense
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170811T183625Z
+    - ID: "487b380b-d2c4-4152-9b0d-1ccf5c515650"
+      Hint: Name
+      Value: Survival Defense

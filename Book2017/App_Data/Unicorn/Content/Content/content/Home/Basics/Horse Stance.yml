@@ -1,0 +1,24 @@
+﻿---
+ID: "865ed374-3ba8-4fd7-9251-e50d88e2a48d"
+Parent: "0d62902f-2376-44f9-bad4-e9830880544b"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/Basics/Horse Stance
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170811T182854Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Horse Stance
+    - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
+      Hint: Tags
+      Type: Multilist
+      Value: |
+        {4FF90F57-EF3F-4CBE-878C-5FECF1CB5039}
+        {072D4265-EE76-4CBB-9DB1-145BEDBCF740}
+        {1BEC36FE-BBC9-423E-9757-7408A9BA9C4A}

@@ -1,0 +1,24 @@
+﻿---
+ID: "bb1f20d5-c34e-45c3-bc84-ef57d827982b"
+Parent: "bc0c05e9-e978-48b6-ae12-b490f7e583dc"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/Ground/Key Lock
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170811T184312Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Key Lock
+    - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
+      Hint: Tags
+      Type: Multilist
+      Value: |
+        {B44830F1-3CFE-4F79-8F11-AFA07C3187F0}
+        {A9BE53BB-5137-4F56-93E9-2A2CEE216CA9}
+        {072D4265-EE76-4CBB-9DB1-145BEDBCF740}

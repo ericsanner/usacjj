@@ -1,0 +1,21 @@
+﻿---
+ID: "4500cbec-82f2-46cc-9fe6-b2447041461c"
+Parent: "9e7cb971-bdc3-4ab0-bdff-592dbb525c50"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: "/sitecore/content/Home/USA CJJ/Bio - Mr Frey"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170811T184523Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: "Bio - Mr Frey"
+    - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
+      Hint: Tags
+      Type: Multilist
+      Value: "{A28521DF-29D0-4ABB-9BBD-1AE2D188B9C5}"

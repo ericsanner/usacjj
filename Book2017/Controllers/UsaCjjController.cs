@@ -36,18 +36,6 @@ namespace Book2017.Controllers
 			return View("~/Views/UsaCjj/Section.cshtml", model);
 		}
 
-		public ActionResult Content()
-		{
-			Item current = SitecoreContext.GetCurrentItem<Item>();
-			IContent model = SitecoreContext.GetCurrentItem<IContent>();
-
-			model.Version = current.Version.Number;
-			model.Updated = current.Statistics.Updated;
-			model.Parent = current.Parent;
-
-			return View("~/Views/UsaCjj/Content.cshtml", model);
-		}
-
 		public ActionResult Technique()
 		{
 			Item current = SitecoreContext.GetCurrentItem<Item>();

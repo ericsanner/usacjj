@@ -1,8 +1,8 @@
 ﻿---
-ID: "4afbdf57-7ba5-45b5-8e15-474f26d35e7e"
+ID: "03903c5f-7e13-4344-823f-28c2df8ebf39"
 Parent: "0d62902f-2376-44f9-bad4-e9830880544b"
 Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
-Path: /sitecore/content/Home/Basics/Knife Hand
+Path: /sitecore/content/Home/Basics/Ridge Hand
 DB: master
 Languages:
 - Language: en
@@ -11,10 +11,10 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170807T134425Z
+      Value: 20170810T205714Z
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
-      Value: Knife Hand
+      Value: Ridge Hand
     - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
       Hint: Tags
       Type: Multilist

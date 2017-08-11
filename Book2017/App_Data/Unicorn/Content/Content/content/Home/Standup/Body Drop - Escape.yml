@@ -1,0 +1,23 @@
+﻿---
+ID: "15be5f4f-2b13-4b9a-9971-1b5655c8918c"
+Parent: "869fb770-9363-442d-903c-da9b2e1c11d6"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: "/sitecore/content/Home/Standup/Body Drop - Escape"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170811T185832Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: "Body Drop - Escape"
+    - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
+      Hint: Tags
+      Type: Multilist
+      Value: |
+        {E34D1BDD-530A-4A84-8851-CE13DA48938D}
+        {072D4265-EE76-4CBB-9DB1-145BEDBCF740}

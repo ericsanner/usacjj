@@ -36,3 +36,6 @@ Languages:
       Hint: Show Parent Link
       Type: Checkbox
       Value: 1
+    - ID: "78865559-dfbc-4ce5-ad26-454de23dfcde"
+      Hint: Title
+      Value: Alphabetical

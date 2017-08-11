@@ -12,6 +12,26 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170810T210018Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Content
+      Value: |
+        <p style="color: #333333; background-color: #ffffff; margin-right: 0px; margin-bottom: 10px; margin-left: 0px;">4 parts to a kick</p>
+        <ul style="color: #333333; background-color: #ffffff; margin-top: 0px; margin-bottom: 10px;">
+            <li>Up</li>
+            <li>Out</li>
+            <li>Back</li>
+            <li>Down</li>
+        </ul>
+        <p style="color: #333333; background-color: #ffffff; margin: 0px 0px 10px;">4 types of kicks</p>
+        <ul style="color: #333333; background-color: #ffffff; margin-top: 0px; margin-bottom: 10px;">
+            <li>Front leg</li>
+            <li>Back leg</li>
+            <li>Step</li>
+            <li>Jump</li>
+        </ul>
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Kicks
     - ID: "987b0b2c-05ab-45f7-bd85-b622c0794991"
       Hint: Title
       Value: Kicks

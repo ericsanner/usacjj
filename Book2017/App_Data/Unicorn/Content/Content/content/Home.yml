@@ -152,6 +152,13 @@ Languages:
       Hint: Show Parent Link
       Type: Checkbox
       Value: 0
+    - ID: "78865559-dfbc-4ce5-ad26-454de23dfcde"
+      Hint: Title
+      Value: Student Manual
+    - ID: "8a008441-d947-4019-a9c2-a8629edd6d62"
+      Hint: Content
+      Value: |
+        <span style="background-color: #ffffff; color: #333333;">welcome to the usa cjj student manual</span>
     - ID: "b0002217-ad14-40c7-9bd2-1ad63ac45581"
       Hint: Show Version Info
       Type: Checkbox

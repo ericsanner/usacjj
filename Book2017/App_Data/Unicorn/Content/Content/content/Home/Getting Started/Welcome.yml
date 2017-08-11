@@ -12,6 +12,13 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170522T021546Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Content
+      Value: |
+        <span style="background-color: #ffffff; color: #333333;">Welcome to USA Combat Jujitsu!</span>
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Welcome
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

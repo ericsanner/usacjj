@@ -1,16 +1,16 @@
 ﻿---
-ID: "9c358da7-6246-4583-b114-3c9c6cd86ad0"
+ID: "5011582d-0e34-42c2-8a3c-83f997156c35"
 Parent: "ec16052b-e37c-44a8-90a3-e89084f97fe6"
 Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: /sitecore/layout/Renderings/User Defined/HomePage
+Path: /sitecore/layout/Renderings/User Defined/Content
 DB: master
 SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: /sitecore/templates/User Defined/HomePage
+  Value: /sitecore/templates/User Defined/Content
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
-  Value: HomePage
+  Value: Content
 - ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
   Hint: Controller
   Value: UsaCjj

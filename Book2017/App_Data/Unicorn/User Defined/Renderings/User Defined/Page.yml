@@ -1,16 +1,16 @@
 ﻿---
-ID: "ce3a0b82-7b26-46c6-a997-88e5f8d6702c"
+ID: "cbb58691-2115-451b-90a1-3369d6fc4c93"
 Parent: "ec16052b-e37c-44a8-90a3-e89084f97fe6"
 Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: /sitecore/layout/Renderings/User Defined/IdxPage
+Path: /sitecore/layout/Renderings/User Defined/Page
 DB: master
 SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: /sitecore/templates/User Defined/IdxPage
+  Value: /sitecore/templates/User Defined/Page
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
-  Value: IdxPage
+  Value: Page
 - ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
   Hint: Controller
   Value: UsaCjj

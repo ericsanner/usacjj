@@ -1,8 +1,8 @@
 ﻿---
-ID: "bb134820-25e8-44f8-9c62-b89a7a63ec7e"
-Parent: "78cdbc95-289a-4894-ae8a-3129e1bee363"
+ID: "a6ffa563-715e-41c1-8990-dd948b34154e"
+Parent: "862b2507-2311-462f-a432-a6759f6b0f7b"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/User Defined/HomePage/Content
+Path: /sitecore/templates/User Defined/Content/Content
 DB: master
 Languages:
 - Language: en
@@ -11,4 +11,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170522T021509Z
+      Value: 20170522T015417Z

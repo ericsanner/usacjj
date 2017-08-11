@@ -1,7 +1,7 @@
 ﻿---
 ID: "cedb3912-d618-43a1-82e1-c8fe79761f29"
 Parent: "dfb4e70c-f049-41ff-beef-3a12ba6f8bed"
-Template: "6ddc39bc-f35a-4bc7-b371-afc8a6ab5b14"
+Template: "3ed28718-a2c6-41e2-9ada-999074ca637a"
 Path: /sitecore/content/Home/Index/Alphabetical
 DB: master
 Languages:
@@ -23,12 +23,16 @@ Languages:
               s:ds=""
               s:id="{327F1FD0-E2CF-463F-9594-9765590C2232}"
               s:par=""
-              s:ph="content" />
+              s:ph="extracontent" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170808T152038Z
-    - ID: "987b0b2c-05ab-45f7-bd85-b622c0794991"
+    - ID: "2658b55c-32c1-4689-ade7-56939c9c04d8"
       Hint: Title
       Value: Alphabetical
+    - ID: "62c88f06-acc9-49f3-a5b5-02dc049a95e2"
+      Hint: Show Parent Link
+      Type: Checkbox
+      Value: 1

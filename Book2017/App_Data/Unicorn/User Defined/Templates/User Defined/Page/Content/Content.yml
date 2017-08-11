@@ -1,16 +1,19 @@
 ﻿---
-ID: "60664b23-3a85-430e-91ea-d9c1748248ff"
-Parent: "bb134820-25e8-44f8-9c62-b89a7a63ec7e"
+ID: "8a008441-d947-4019-a9c2-a8629edd6d62"
+Parent: "97c28f24-9c9c-4728-9837-195cb8fd7a8b"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/User Defined/HomePage/Content/Title
+Path: /sitecore/templates/User Defined/Page/Content/Content
 DB: master
 SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: /sitecore/system/Settings/HTML Editor Profiles/Rich Text Full
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: Rich Text
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 200
 Languages:
 - Language: en
   Versions:

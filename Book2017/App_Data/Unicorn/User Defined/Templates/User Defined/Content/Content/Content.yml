@@ -1,8 +1,8 @@
 ﻿---
-ID: "5ca576c8-98f6-4bfc-9cef-309d6c75666c"
-Parent: "bb134820-25e8-44f8-9c62-b89a7a63ec7e"
+ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+Parent: "a6ffa563-715e-41c1-8990-dd948b34154e"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/User Defined/HomePage/Content/Content
+Path: /sitecore/templates/User Defined/Content/Content/Content
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
@@ -21,7 +21,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170522T021509Z
+      Value: 20170522T015418Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

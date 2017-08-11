@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Book2017.Models
 {
     [SitecoreType(TemplateId = "{862B2507-2311-462F-A432-A6759F6B0F7B}", AutoMap = true)]
-	public interface ITechnique
+	public interface IContent
 	{
 		Guid ID { get; set; }
 		string Title { get; set; }

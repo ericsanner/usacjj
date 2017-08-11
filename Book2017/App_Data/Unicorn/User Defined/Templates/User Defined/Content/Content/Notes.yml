@@ -2,7 +2,7 @@
 ID: "6d6e772b-9f30-4b90-acdf-9c610b78d321"
 Parent: "a6ffa563-715e-41c1-8990-dd948b34154e"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/User Defined/Technique/Content/Notes
+Path: /sitecore/templates/User Defined/Content/Content/Notes
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"

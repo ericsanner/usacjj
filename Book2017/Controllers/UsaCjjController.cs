@@ -11,48 +11,47 @@ namespace Book2017.Controllers
 	{
 		public ActionResult Navigation()
 		{
-			Item itm = SitecoreContext.GetHomeItem<Item>();
+			Item home = SitecoreContext.GetHomeItem<Item>();
 			Navigation model = new Navigation();
 
-			model.Pages = itm.GetChildren();
+			model.Pages = home.GetChildren();
 
 			return View("~/Views/UsaCjj/Navigation.cshtml", model);
 		}
 
-		public ActionResult HomePage()
-		{
-			IHomePage model = SitecoreContext.GetCurrentItem<IHomePage>();
+        public ActionResult Page()
+	    {
+	        Item current = SitecoreContext.GetCurrentItem<Item>();
+            IPage model = SitecoreContext.GetCurrentItem<IPage>();
 
-			return View("~/Views/UsaCjj/HomePage.cshtml", model);
-		}
+	        model.Version = current.Version.Number;
+	        model.Updated = current.Statistics.Updated;
+	        model.Parent = current.Parent;
 
-		public ActionResult Section()
+            return View("~/Views/UsaCjj/Page.cshtml", model);
+	    }
+
+        public ActionResult Section()
 		{
-			Item itm = SitecoreContext.GetCurrentItem<Item>();
+			Item current = SitecoreContext.GetCurrentItem<Item>();
 			ISection model = SitecoreContext.GetCurrentItem<ISection>();
 
-			model.Pages = itm.GetChildren();
+			model.Pages = current.GetChildren();
 			
 			return View("~/Views/UsaCjj/Section.cshtml", model);
 		}
 
-		public ActionResult Technique()
+		public ActionResult Content()
 		{
 			Item current = SitecoreContext.GetCurrentItem<Item>();
-			ITechnique model = SitecoreContext.GetCurrentItem<ITechnique>();
+			IContent model = SitecoreContext.GetCurrentItem<IContent>();
 
 			model.Version = current.Version.Number;
 			model.Updated = current.Statistics.Updated;
 			model.Parent = current.Parent;
 
-			return View("~/Views/UsaCjj/Technique.cshtml", model);
+			return View("~/Views/UsaCjj/Content.cshtml", model);
 		}
-	    public ActionResult IdxPage()
-	    {
-	        IIdxPage model = SitecoreContext.GetCurrentItem<IIdxPage>();
-            
-	        return View("~/Views/UsaCjj/IdxPage.cshtml", model);
-	    }
 
         public ActionResult IndexAlphabetical()
 		{
@@ -71,7 +70,7 @@ namespace Book2017.Controllers
             //put items into correct location in dictionary
 		    foreach (Item itm in allItems)
 		    {
-		        if (itm.TemplateName != "IdxPage")
+		        if (itm.TemplateName != "Page")
 		        {
 		            dict[itm.DisplayName[0].ToString()].Add(itm);
                 }

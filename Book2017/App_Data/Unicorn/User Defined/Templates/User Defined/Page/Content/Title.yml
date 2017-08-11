@@ -1,8 +1,8 @@
 ﻿---
-ID: "2658b55c-32c1-4689-ade7-56939c9c04d8"
-Parent: "482715de-12cd-4287-a5f5-9bd71d639e83"
+ID: "78865559-dfbc-4ce5-ad26-454de23dfcde"
+Parent: "97c28f24-9c9c-4728-9837-195cb8fd7a8b"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/User Defined/IdxPage/Content/Title
+Path: /sitecore/templates/User Defined/Page/Content/Title
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

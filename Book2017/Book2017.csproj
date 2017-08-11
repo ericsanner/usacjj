@@ -205,12 +205,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\IIdxPage.cs" />
-    <Compile Include="Models\IHomePage.cs" />
+    <Compile Include="Models\IPage.cs" />
     <Compile Include="Models\Navigation.cs" />
     <Compile Include="Models\ISection.cs" />
     <Compile Include="Models\ITag.cs" />
-    <Compile Include="Models\ITechnique.cs" />
+    <Compile Include="Models\IContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -229,13 +228,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\ESanner.pubxml" />
     <Content Include="Views\MainLayout.cshtml" />
-    <Content Include="Views\UsaCjj\Technique.cshtml" />
+    <Content Include="Views\UsaCjj\Content.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\UsaCjj\Section.cshtml" />
     <Content Include="Views\UsaCjj\Navigation.cshtml" />
     <Content Include="Views\UsaCjj\IndexAlphabetical.cshtml" />
-    <Content Include="Views\UsaCjj\HomePage.cshtml" />
-    <Content Include="Views\UsaCjj\IdxPage.cshtml" />
+    <Content Include="Views\UsaCjj\Page.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

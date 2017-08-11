@@ -1,0 +1,25 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Links
+@model Book2017.Models.IPage
+
+<h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
+
+<div class="content-content">
+    @Html.Glass().Editable(x => x.Content)
+</div>
+
+@Html.Sitecore().Placeholder("extracontent")
+
+@if (Model.ShowVersionInfo)
+{
+    <div class="version">
+        Version: @Model.Version Last Updated: @Model.Updated
+    </div>
+}
+
+@if (Model.ShowParentLink)
+{
+    <div class="returnToSection">
+        <a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
+    </div>
+}

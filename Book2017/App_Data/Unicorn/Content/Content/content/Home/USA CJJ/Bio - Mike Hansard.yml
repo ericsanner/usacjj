@@ -1,9 +1,13 @@
 ﻿---
-ID: "39966807-c3ad-42d1-b1c1-62141937d40b"
+ID: "fc903a41-ce9c-4b6f-b5a5-aa0305c740da"
 Parent: "9e7cb971-bdc3-4ab0-bdff-592dbb525c50"
 Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
-Path: "/sitecore/content/Home/USA CJJ/Bio - Mr Sanner"
+Path: "/sitecore/content/Home/USA CJJ/Bio - Mike Hansard"
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
 Languages:
 - Language: en
   Versions:
@@ -11,10 +15,10 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170811T184506Z
+      Value: 20170811T184452Z
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
-      Value: "Bio - Mr Sanner"
+      Value: "Bio - Mike Hansard"
     - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
       Hint: Tags
       Type: Multilist

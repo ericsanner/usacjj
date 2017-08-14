@@ -4,22 +4,24 @@
 
 <h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
 
-<div class="content-content">
+<div class="content-body">
     @Html.Glass().Editable(x => x.Content)
 </div>
 
 @Html.Sitecore().Placeholder("extracontent")
 
-@if (Model.ShowVersionInfo)
-{
-    <div class="version">
-        Version: @Model.Version Last Updated: @Model.Updated
-    </div>
-}
+<div class="content-footer">
+    @if (Model.ShowVersionInfo)
+    {
+        <div class="content-version">
+            Version: @Model.Version Last Updated: @Model.Updated
+        </div>
+    }
 
-@if (Model.ShowParentLink)
-{
-    <div class="returnToSection">
-        <a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
-    </div>
-}
+    @if (Model.ShowParentLink)
+    {
+        <div class="content-returnToSection">
+            <a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
+        </div>
+    }
+</div>

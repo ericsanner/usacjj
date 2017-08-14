@@ -1,0 +1,42 @@
+﻿---
+ID: "e9254245-e06f-4724-a249-349cb1916ba3"
+Parent: "9e7cb971-bdc3-4ab0-bdff-592dbb525c50"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/USA CJJ/Black Belts
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170814T141216Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Content
+      Value: |
+        <ul>
+            <li><a href="~/link.aspx?_id=FC903A41CE9C4B6FB5A5AA0305C740DA&amp;_z=z">Hanshi Mike Hansard</a> - Founder, 10th Degree
+            <ul>
+                <li>Cobie Wells - 7th Degree</li>
+                <li>Jesse Pryor - 5th Degree</li>
+                <li><a href="~/link.aspx?_id=39966807C3AD42D1B1C162141937D40B&amp;_z=z">Eric Sanner</a> - 4th Degree</li>
+                <li><a href="~/link.aspx?_id=4500CBEC82F246CC9FE6B2447041461C&amp;_z=z">Ric Frey</a> - 3rd Degree</li>
+                <li>Gavin Needler - 2nd Degree</li>
+                <li>Melvin Williamson - 1st Degree</li>
+                <li>David Shockney - 1st Degree</li>
+            </ul>
+            </li>
+        </ul>
+        <p>&nbsp;</p>
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Black Belts
+    - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
+      Hint: Tags
+      Type: Multilist
+      Value: "{A28521DF-29D0-4ABB-9BBD-1AE2D188B9C5}"

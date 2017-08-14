@@ -3,33 +3,39 @@
 @using Sitecore.Links
 @model Book2017.Models.IContent
 
-<h2 class="technique-title">@Html.Glass().Editable(x => x.Title)</h2>
+<h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
 
-<div class="technique-description">
-	@Html.Glass().Editable(x => x.Content)
-</div>
+@if (Model.Content.Trim() != "")
+{
+    <div class="content-body">
+        @Html.Glass().Editable(x => x.Content)
+    </div>
+}
 @if (Model.Notes.Trim() != "")
 {
-	<div class="technique-notes">
+	<div class="content-notes">
 		@Html.Glass().Editable(x => x.Notes)
 	</div>
 }
-@if (Model.Tags != null)
-{
-    <div class="tags">
-        <ul>
-            @foreach (ITag tag in Model.Tags)
-            {
-                <li>@tag.Name</li>
-            }
-        </ul>
+
+<div class="content-footer">
+    @if (Model.Tags != null)
+    {
+        <div class="content-tags">
+            <ul>
+                @foreach (ITag tag in Model.Tags)
+                {
+                    <li>@tag.Name</li>
+                }
+            </ul>
+        </div>
+    }
+
+    <div class="content-version">
+        Version: @Model.Version Last Updated: @Model.Updated
     </div>
-}
 
-<div class="version">
-    Version: @Model.Version Last Updated: @Model.Updated
-</div>
-
-<div class="returnToSection">
-    <a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
+    <div class="content-returnToSection">
+        <a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
+    </div>
 </div>

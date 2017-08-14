@@ -1,7 +1,12 @@
-﻿html, body {
+﻿/* Html Elements */
+
+html, body {
   margin: 0px;
   height: 100%;
 }
+
+
+/* Page Structure */
 
 .header {
   width: 100%;
@@ -22,6 +27,14 @@
   background-color: black;
   height: 100%;
 }
+
+.content {
+  height: 100%;
+  padding: 20px 15px 10px 15px;
+}
+
+
+/* Navigation */
 
 .nav ul {
   padding: 0px;
@@ -46,13 +59,82 @@
   padding: 10px;
 }
 
-.content {
-  height: 100%;
+
+/* Content */
+
+.content-title {
+  margin: 0px;
+}
+
+.content-body {
+  padding-top: 20px;
+}
+
+.content-notes {
+  
+}
+
+.section-pages {
+  padding-top: 20px;
+}
+
+.section-pages ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.section-pages li {
+  float: left;
+  display: block;
+  padding: 5px;
+  width: 25%;
+}
+
+.content-footer {
+  padding-top: 20px;
+}
+
+.content-tags ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  padding-bottom: 20px;
+}
+
+.content-tags ul li {
+  display: inline;
+  padding: 5px;
+  border: 1px solid grey;
+}
+
+.content-version {
+  float: right
+}
+
+.content-returnToSection {
+  float: left;
+}
+
+
+/* Index Data Tables */
+
+.index-header {
+  width: 75%;
+  margin: 0px auto;
+  font-weight: bold;
+  font-size: larger;
 }
 
 .index-data {
   width: 75%;
   border: 1px solid black;
+  margin: 0px auto;
+  margin-bottom: 20px;
+}
+
+.index-data thead {
+  border-bottom: 1px solid black;
 }
 
 .index-data .item {

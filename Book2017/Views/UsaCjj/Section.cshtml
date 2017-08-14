@@ -3,11 +3,14 @@
 @using Sitecore.Links
 @model Book2017.Models.ISection
 
-<h2 class="section-title">@Html.Glass().Editable(x => x.Title)</h2>
+<h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
 
-<div class="section-intro">
-    @Html.Glass().Editable(x => x.Intro)
-</div>
+@if (Model.Intro.Trim() != "")
+{
+    <div class="content-body">
+        @Html.Glass().Editable(x => x.Intro)
+    </div>
+}
 @if (Model.Pages.Count > 0)
 {
     <div class="section-pages">

@@ -1,0 +1,36 @@
+﻿---
+ID: "3495dd38-a67d-4518-9057-6fd6f049018a"
+Parent: "dfb4e70c-f049-41ff-beef-3a12ba6f8bed"
+Template: "3ed28718-a2c6-41e2-9ada-999074ca637a"
+Path: /sitecore/content/Home/Index/Print
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{8136C8BB-27BE-462B-943A-131C2D675C73}"
+              p:after="*[1=2]"
+              s:id="{98A7B31D-ACF6-4CC2-AA51-3FB76ADE1D30}"
+              s:ph="extracontent" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170815T170032Z
+    - ID: "78865559-dfbc-4ce5-ad26-454de23dfcde"
+      Hint: Title
+      Value: 

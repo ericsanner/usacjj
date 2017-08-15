@@ -1,15 +1,21 @@
 ﻿using Book2017.Models;
 using Glass.Mapper.Sc.Web.Mvc;
+using HtmlAgilityPack;
 using Sitecore.Collections;
 using Sitecore.Data;
 using Sitecore.Data.Items;
+using Sitecore.Links;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web.Mvc;
 
 namespace Book2017.Controllers
 {
-    public class UsaCjjController : GlassController
+	public class UsaCjjController : GlassController
 	{
 		public ActionResult Navigation()
 		{
@@ -142,5 +148,90 @@ namespace Book2017.Controllers
 
             return View("~/Views/UsaCjj/IndexContent.cshtml", dict);
 	    }
+
+	    public ActionResult Print()
+	    {
+		    string output = string.Empty;
+		    string url = string.Empty;
+		    string pageContent = string.Empty;
+		    
+			Sitecore.Links.UrlOptions urlOptions = LinkManager.GetDefaultUrlOptions();
+		    urlOptions.AlwaysIncludeServerUrl = true;
+		    urlOptions.LanguageEmbedding = LanguageEmbedding.Never;
+
+			//get sections
+			Item home = SitecoreContext.GetHomeItem<Item>();
+	        ChildList sections = home.GetChildren();
+
+		    int i = 0;
+
+	        foreach (Item section in sections)
+	        {
+		        if (++i == 4)
+			        break;
+
+		        url = LinkManager.GetItemUrl(section, urlOptions);
+				pageContent = GetPageContent(url);
+		        output += GetPageBody(pageContent);
+
+				ChildList items = section.GetChildren();
+
+	            foreach (Item itm in items)
+	            {
+	                url = LinkManager.GetItemUrl(itm, urlOptions);
+		            pageContent = GetPageContent(url);
+					output += GetPageBody(pageContent);
+	            }
+	        }
+
+		    ViewBag.Content = output;
+
+            return View("~/Views/UsaCjj/Print.cshtml");
+	    }
+
+		private string GetPageContent(string url)
+		{
+			string ret = string.Empty;
+
+			try
+			{
+				WebRequest request = WebRequest.Create(url);
+				request.Method = "Get";
+				//Get the response
+				WebResponse response = request.GetResponse();
+				//Read the stream from the response
+				ret= new StreamReader(response.GetResponseStream(), System.Text.Encoding.UTF8).ReadToEnd();
+			}
+			catch (Exception)
+			{
+				Debug.WriteLine("Error getting url: " + url);
+			}
+
+			return ret;
+		}
+
+		private string GetPageBody(string content)
+		{
+			HtmlDocument html = new HtmlDocument();
+			html.LoadHtml(content);
+			HtmlNode root = html.DocumentNode;
+			HtmlNode contentNode = null;
+
+			try
+			{
+				contentNode = root.Descendants().Single(n => n.GetAttributeValue("class", "").Contains("main-content"));
+			}
+			catch (Exception)
+			{
+				return content;
+			}
+
+			string ret = string.Empty;
+			ret += "<div class=\"print-content\">";
+			ret += contentNode.InnerHtml;
+			ret += "</div>";
+			
+			return ret;
+		}
     }
 }

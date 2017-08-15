@@ -1,4 +1,11 @@
-﻿/* Html Elements */
+﻿/*
+  TODO:
+
+  Some weird spacing after the last table in the index
+  Too much spacing before the section-pages-heading
+*/
+
+/* Html Elements */
 
 html, body {
   margin: 0px;
@@ -28,7 +35,7 @@ html, body {
   height: 100%;
 }
 
-.content {
+.main-content {
   height: 100%;
   padding: 20px 15px 10px 15px;
 }
@@ -143,4 +150,11 @@ html, body {
 
 .index-data .section {
   width: 25%;
+}
+
+/* Print */
+
+.print-content {
+  clear: both;
+  padding-top: 20px;
 }

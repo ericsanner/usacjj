@@ -2,7 +2,10 @@
 @using Sitecore.Links
 @model Book2017.Models.IPage
 
-<h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
+@if (Model.Title.Trim() != "")
+{
+    <h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
+}
 
 <div class="content-body">
     @Html.Glass().Editable(x => x.Content)

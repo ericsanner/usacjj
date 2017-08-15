@@ -3,7 +3,10 @@
 @using Sitecore.Links
 @model Book2017.Models.ISection
 
-<h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
+@if (Model.Title.Trim() != "")
+{
+    <h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
+}
 
 @if (Model.Intro.Trim() != "")
 {
@@ -13,6 +16,9 @@
 }
 @if (Model.Pages.Count > 0)
 {
+    <h4 class="section-pages-header">
+        In this section: 
+    </h4>
     <div class="section-pages">
         <ul>
             @foreach (Item i in Model.Pages)

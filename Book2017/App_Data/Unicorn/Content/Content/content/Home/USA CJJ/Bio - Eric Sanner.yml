@@ -16,9 +16,15 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170811T184506Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Content
+      Value: 
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
       Value: "Bio - Eric Sanner"
+    - ID: "6d6e772b-9f30-4b90-acdf-9c610b78d321"
+      Hint: Notes
+      Value: 
     - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
       Hint: Tags
       Type: Multilist

@@ -1,21 +1,18 @@
 ﻿using Book2017.Models;
 using Glass.Mapper.Sc.Web.Mvc;
-using HtmlAgilityPack;
 using Sitecore.Collections;
 using Sitecore.Data;
 using Sitecore.Data.Items;
-using Sitecore.Links;
+using Sitecore.Mvc.Extensions;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Net;
 using System.Web.Mvc;
+using WebSupergoo.ABCpdf10;
 
 namespace Book2017.Controllers
 {
-	public class UsaCjjController : GlassController
+    public class UsaCjjController : GlassController
 	{
 		public ActionResult Navigation()
 		{
@@ -95,7 +92,7 @@ namespace Book2017.Controllers
             //get sections
 	        Item home = SitecoreContext.GetHomeItem<Item>();
 	        ChildList sections = home.GetChildren();
-
+            
 	        foreach (Item section in sections)
 	        {
 	            dict.Add(section.DisplayName, new List<Item>());
@@ -151,87 +148,196 @@ namespace Book2017.Controllers
 
 	    public ActionResult Print()
 	    {
-		    string output = string.Empty;
-		    string url = string.Empty;
-		    string pageContent = string.Empty;
-		    
-			Sitecore.Links.UrlOptions urlOptions = LinkManager.GetDefaultUrlOptions();
-		    urlOptions.AlwaysIncludeServerUrl = true;
-		    urlOptions.LanguageEmbedding = LanguageEmbedding.Never;
+	        const int PAGE_WIDTH = 612;
+	        const int PAGE_HEIGHT = 792;
+	        const int INCH = 72;
+	        const int MARGIN = INCH / 2;
+	        const int FOOTER_HEIGHT = 30;
+	        const int COL_WIDTH = 100;
+	        
+	        const int TITLE_FONT_SIZE = 24;
+	        const int SUBTITLE_FONT_SIZE = 18;
+            const int CONTENT_FONT_SIZE = 14;
+	        const int FOOTER_FONT_SIZE = 10;
+	        const int LINE_BREAK_FONT_SIZE = 12;
 
-			//get sections
-			Item home = SitecoreContext.GetHomeItem<Item>();
+            const string LINE_BREAK = "<br />";
+
+	        Doc theDoc = new Doc();
+	        int theID, contentStartPage, contentEndPage;
+	        string content;
+
+            //get sections
+            Item home = SitecoreContext.GetHomeItem<Item>();
 	        ChildList sections = home.GetChildren();
-
-		    int i = 0;
 
 	        foreach (Item section in sections)
 	        {
-		        if (++i == 4)
-			        break;
+                ChildList items = section.GetChildren();
 
-		        url = LinkManager.GetItemUrl(section, urlOptions);
-				pageContent = GetPageContent(url);
-		        output += GetPageBody(pageContent);
+	            //create a new page and set our page pointer to the new page
+	            theDoc.Page = theDoc.AddPage();
 
-				ChildList items = section.GetChildren();
+	            //get item as IContent
+	            ISection sectionItem = SitecoreContext.GetItem<ISection>(section.ID.Guid);
 
-	            foreach (Item itm in items)
+                //reset text position
+                theDoc.TextStyle.HPos = 0;
+	            theDoc.TextStyle.VPos = 0;
+
+	            //set container to full page (no footer on section page)
+	            theDoc.Rect.Position(MARGIN, MARGIN);
+	            theDoc.Rect.Width = PAGE_WIDTH - MARGIN - MARGIN;
+	            theDoc.Rect.Height = PAGE_HEIGHT - MARGIN - MARGIN;
+
+	            //title
+	            theDoc.FontSize = TITLE_FONT_SIZE;
+	            theDoc.AddHtml("<h1>" + sectionItem.Title + "</h1>");
+
+	            theDoc.FontSize = LINE_BREAK_FONT_SIZE;
+	            theDoc.AddHtml(LINE_BREAK);
+
+                //intro
+                if (!sectionItem.Intro.IsEmptyOrNull())
 	            {
-	                url = LinkManager.GetItemUrl(itm, urlOptions);
-		            pageContent = GetPageContent(url);
-					output += GetPageBody(pageContent);
+	                theDoc.FontSize = CONTENT_FONT_SIZE;
+	                theDoc.AddHtml("<p>" + sectionItem.Intro + "</p>");
+
+	                theDoc.FontSize = LINE_BREAK_FONT_SIZE;
+	                theDoc.AddHtml(LINE_BREAK);
+                }
+                
+                //subtitle
+                theDoc.FontSize = SUBTITLE_FONT_SIZE;
+	            theDoc.AddHtml("<p>In this section:</p>");
+
+	            theDoc.FontSize = LINE_BREAK_FONT_SIZE;
+	            theDoc.AddHtml(LINE_BREAK);
+
+                //children
+                content = "<ul>";
+                foreach (Item itm in items)
+                {
+                    content += "<li>" + itm.DisplayName + "</li>";
+                }
+	            content += "</ul>";
+
+	            theDoc.FontSize = CONTENT_FONT_SIZE;
+	            theID = theDoc.AddHtml(content);
+
+                if (theDoc.Chainable(theID))
+	            {
+	                while (theDoc.Chainable(theID))
+	                {
+	                    theDoc.Page = theDoc.AddPage();
+	                    theID = theDoc.AddHtml("", theID);
+	                }
+	            }
+
+                //section pages
+                foreach (Item itm in items)
+	            {
+	                if (itm.TemplateName != "Page")
+	                {
+	                    //create a new page and set our page pointer to the new page
+	                    theDoc.Page = theDoc.AddPage();
+
+                        //track which page we are starting on
+	                    contentStartPage = theDoc.PageNumber;
+
+                        //get item as IContent
+                        IContent contentItem = SitecoreContext.GetItem<IContent>(itm.ID.Guid);
+
+	                    contentItem.Version = itm.Version.Number;
+	                    contentItem.Updated = itm.Statistics.Updated;
+	                    contentItem.Parent = itm.Parent;
+                        
+	                    //reset text position
+	                    theDoc.TextStyle.HPos = 0;
+	                    theDoc.TextStyle.VPos = 0;
+
+	                    //set container
+	                    theDoc.Rect.Position(MARGIN, MARGIN + FOOTER_HEIGHT);
+	                    theDoc.Rect.Width = PAGE_WIDTH - MARGIN - MARGIN;
+	                    theDoc.Rect.Height = PAGE_HEIGHT - MARGIN - MARGIN - FOOTER_HEIGHT;
+
+                        //title
+	                    theDoc.FontSize = TITLE_FONT_SIZE;
+	                    theDoc.AddHtml("<h1>" + contentItem.Title + "</h1>");
+
+	                    theDoc.FontSize = LINE_BREAK_FONT_SIZE;
+	                    theDoc.AddHtml(LINE_BREAK);
+
+                        //content
+                        content = "<p>" + contentItem.Content + "</p>";
+                        if (!contentItem.Notes.IsEmptyOrNull())
+                        {
+                            content += "<p>" + contentItem.Notes + "</p>";
+                        }
+                        
+                        theDoc.FontSize = CONTENT_FONT_SIZE;
+                        theID = theDoc.AddHtml(content);
+                        
+                        if (theDoc.Chainable(theID))
+                        {
+                            while (theDoc.Chainable(theID))
+                            {
+                                theDoc.Page = theDoc.AddPage();
+                                theID = theDoc.AddHtml("", theID);
+                            }
+                        }
+
+                        //track which page we are ending on
+                        contentEndPage = theDoc.PageCount;
+
+	                    //add tags to last page
+                        if (contentItem.Tags.Any())
+	                    {
+	                        List<string> tags = new List<string>();
+
+	                        foreach (ITag tag in contentItem.Tags)
+	                        {
+	                            tags.Add(tag.Name);
+	                        }
+
+	                        theDoc.Rect.Position(MARGIN, MARGIN + FOOTER_HEIGHT);
+	                        theDoc.Rect.Width = PAGE_WIDTH - MARGIN - MARGIN;
+	                        theDoc.Rect.Height = FOOTER_HEIGHT;
+	                        theDoc.TextStyle.HPos = 0;
+	                        theDoc.TextStyle.VPos = 0;
+	                        theDoc.FontSize = FOOTER_FONT_SIZE;
+	                        theDoc.PageNumber = contentEndPage;
+	                        theDoc.AddHtml("<p>Tags: " + string.Join(", ", tags.ToArray()) + "</p>");
+                        }
+                        
+                        //add footer to all pages for this item
+                        theDoc.Rect.Position(MARGIN, MARGIN);
+	                    theDoc.Rect.Width = PAGE_WIDTH - MARGIN - MARGIN;
+	                    theDoc.Rect.Height = FOOTER_HEIGHT;
+	                    theDoc.TextStyle.HPos = 0.5;
+	                    theDoc.TextStyle.VPos = 0.5;
+	                    theDoc.FontSize = FOOTER_FONT_SIZE;
+	                    for (int i = contentStartPage; i <= contentEndPage; i++)
+	                    {
+	                        theDoc.PageNumber = i;
+	                        theDoc.AddHtml(contentItem.Title + LINE_BREAK + "Section: " +
+	                                       contentItem.Parent.DisplayName + " - Version " + contentItem.Version +
+	                                       " - Updated " + contentItem.Updated.ToString("yyyy-MM-dd"));
+	                    }
+	                }
 	            }
 	        }
 
-		    ViewBag.Content = output;
+            //create save path
+	        string tempPathRel = Sitecore.Configuration.Settings.TempFolderPath;
+	        string tempPathAbs = Sitecore.IO.FileUtil.MapPath(tempPathRel);
+	        string fileName = "usacjj." + DateTime.Now.ToString("yyyyMMddHHmmss") + ".pdf";
+	        ViewBag.Path = tempPathRel + "/" + fileName;
 
-            return View("~/Views/UsaCjj/Print.cshtml");
-	    }
+            theDoc.Save(tempPathAbs + "\\" + fileName);
+	        theDoc.Clear();
 
-		private string GetPageContent(string url)
-		{
-			string ret = string.Empty;
-
-			try
-			{
-				WebRequest request = WebRequest.Create(url);
-				request.Method = "Get";
-				//Get the response
-				WebResponse response = request.GetResponse();
-				//Read the stream from the response
-				ret= new StreamReader(response.GetResponseStream(), System.Text.Encoding.UTF8).ReadToEnd();
-			}
-			catch (Exception)
-			{
-				Debug.WriteLine("Error getting url: " + url);
-			}
-
-			return ret;
-		}
-
-		private string GetPageBody(string content)
-		{
-			HtmlDocument html = new HtmlDocument();
-			html.LoadHtml(content);
-			HtmlNode root = html.DocumentNode;
-			HtmlNode contentNode = null;
-
-			try
-			{
-				contentNode = root.Descendants().Single(n => n.GetAttributeValue("class", "").Contains("main-content"));
-			}
-			catch (Exception)
-			{
-				return content;
-			}
-
-			string ret = string.Empty;
-			ret += "<div class=\"print-content\">";
-			ret += contentNode.InnerHtml;
-			ret += "</div>";
-			
-			return ret;
-		}
+	        return View("~/Views/UsaCjj/Print.cshtml");
+        }
     }
 }

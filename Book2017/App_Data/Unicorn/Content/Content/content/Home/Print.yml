@@ -1,13 +1,13 @@
 ﻿---
 ID: "3495dd38-a67d-4518-9057-6fd6f049018a"
-Parent: "dfb4e70c-f049-41ff-beef-3a12ba6f8bed"
+Parent: "110d559f-dea5-42ea-9c1c-8a5df7e70ef9"
 Template: "3ed28718-a2c6-41e2-9ada-999074ca637a"
-Path: /sitecore/content/Home/Index/Print
+Path: /sitecore/content/Home/Print
 DB: master
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 900
 Languages:
 - Language: en
   Versions:

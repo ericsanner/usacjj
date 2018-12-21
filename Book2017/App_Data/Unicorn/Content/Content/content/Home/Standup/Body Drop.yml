@@ -16,20 +16,32 @@ Languages:
       Hint: Content
       Value: |
         <ol>
-            <li>Attacker right hand <a href="~/link.aspx?_id=F0C22340F6EC41F29A2EC1D59841D606&amp;_z=z">haymaker</a></li>
+            <li>Person A&nbsp;right hand <a href="~/link.aspx?_id=F0C22340F6EC41F29A2EC1D59841D606&amp;_z=z">haymaker punch</a></li>
             <li>At the same time
             <ol>
                 <li>Left hand <a href="~/link.aspx?_id=308BC1B5F0A147A6B14868CF61411208&amp;_z=z">block and grab</a></li>
-                <li>Pivot body 180 degrees by stepping forward with right foot to inside of attackers right foot landing with back to attackers chest</li>
-                <li>Pop right shoulder under attackers right armpit</li>
+                <li>Step foward with right foot and pivot body 180 degrees landing with right foot to inside of Person A right foot and back to Person A chest</li>
+                <li>Pop right shoulder under Person A right armpit
+                <ol>
+                    <li>&nbsp;if you are taller than Person A use your bicep</li>
+                </ol>
+                </li>
             </ol>
             </li>
-            <li>Pull left foot back in circle to take the attacker down</li>
-            <li>Attacker lands on left side</li>
+            <li>Pull left foot back in circle to take Person A down to the ground</li>
+            <li>Person A lands on left side</li>
         </ol>
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
       Value: Body Drop
+    - ID: "6d6e772b-9f30-4b90-acdf-9c610b78d321"
+      Hint: Notes
+      Value: |
+        <ul>
+            <li>This is harder to do if you are perpendicular to the person throwing the punch (your shoulder against their chest) instead of parallel (your back against their chest).</li>
+            <li>This works best when you can use the moment of the person throwing the punch to help take them to the ground.&nbsp; If you stop when your back is against their chest, you've lost the momentum and now have to use strength to get them to the ground.</li>
+            <li>The faster your can do the movements, the harder the person throwing the punch will land on the ground.</li>
+        </ul>
     - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
       Hint: Tags
       Type: Multilist

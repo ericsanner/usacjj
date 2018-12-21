@@ -4,13 +4,15 @@
 
 @if (Model.Pages.Count > 0)
 {
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            @foreach (Item i in Model.Pages)
-            {
-                <li><a href="@LinkManager.GetItemUrl(i)">@i.DisplayName</a></li>
-            }
-        </ul>
+    <nav>        
+        <div class="collapse navbar-collapse" id="sitenav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                @foreach (Item i in Model.Pages)
+                {
+                    <li><a href="@LinkManager.GetItemUrl(i)">@i.DisplayName</a></li>
+                }
+            </ul>
+        </div>
     </nav>
 }

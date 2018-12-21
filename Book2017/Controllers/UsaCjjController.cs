@@ -12,7 +12,7 @@ using WebSupergoo.ABCpdf10;
 
 namespace Book2017.Controllers
 {
-    public class UsaCjjController : GlassController
+	public class UsaCjjController : GlassController
 	{
 		public ActionResult Navigation()
 		{
@@ -215,6 +215,7 @@ namespace Book2017.Controllers
 	            theDoc.AddHtml(LINE_BREAK);
 
                 //children
+				//TODO: Print ul in 3 or 4 columns
                 content = "<ul>";
                 foreach (Item itm in items)
                 {
@@ -272,9 +273,14 @@ namespace Book2017.Controllers
                         content = "<p>" + contentItem.Content + "</p>";
                         if (!contentItem.Notes.IsEmptyOrNull())
                         {
-                            content += "<p>" + contentItem.Notes + "</p>";
+                            content += "<p>Notes:<br />" + contentItem.Notes + "</p>";
                         }
-                        
+
+                        if (!contentItem.InstructorNotes.IsEmptyOrNull())
+                        {
+                            content += "<p>Instructor Notes:<br />" + contentItem.Notes + "</p>";
+                        }
+
                         theDoc.FontSize = CONTENT_FONT_SIZE;
                         theID = theDoc.AddHtml(content);
                         
@@ -327,6 +333,8 @@ namespace Book2017.Controllers
 	                }
 	            }
 	        }
+
+			//TODO: Print Index Pages
 
             //create save path
 	        string tempPathRel = Sitecore.Configuration.Settings.TempFolderPath;

@@ -22,9 +22,15 @@ Languages:
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
       Value: Defensive Stance
+    - ID: "6d6e772b-9f30-4b90-acdf-9c610b78d321"
+      Hint: Notes
+      Value: notes
     - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
       Hint: Tags
       Type: Multilist
       Value: |
         {4FF90F57-EF3F-4CBE-878C-5FECF1CB5039}
         {2F6B3781-34A6-4746-9AC7-97793616981B}
+    - ID: "a5eeb78a-5c8f-4575-8cbb-769642b19dd8"
+      Hint: Instructor Notes
+      Value: instructor notes

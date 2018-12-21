@@ -1,0 +1,5 @@
+﻿@media screen and (max-width: 768px){
+    .section-pages ul {
+        column-count: 2;     
+    }
+}

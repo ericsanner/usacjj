@@ -16,8 +16,17 @@
 }
 @if (Model.Notes.Trim() != "")
 {
-	<div class="content-notes">
+	<div class="content-notes content-basicnotes">
+        <div class="note-title">Notes:</div>
 		@Html.Glass().Editable(x => x.Notes)
+	</div>
+}
+
+@if (Model.InstructorNotes.Trim() != "")
+{
+	<div class="content-notes content-instructornotes">
+		<div class="note-title">Instructor Notes:</div>
+		@Html.Glass().Editable(x => x.InstructorNotes)
 	</div>
 }
 

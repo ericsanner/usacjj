@@ -3,18 +3,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" />
     <title>USA CJJ</title>
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <link rel="stylesheet" href="/Content/Site.css" />
+    <link rel="stylesheet" href="/Content/site.css" />
+    <link rel="stylesheet" href="/Content/site_mobile.css" />
 </head>
 <body>
-
-<div class="header">USA Combat Jujitsu</div>
-<div class="row">
-    <div class="nav col-md-2">@Html.Sitecore().Placeholder("nav")</div>
-    <div class="main-content col-md-10">@Html.Sitecore().Placeholder("content")</div>    
-</div>
-
+    <div class="site-container">
+        <div class="site-header">
+            USA Combat Jujitsu
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sitenav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="site-body row">
+            <div class="main-nav col-md-2">@Html.Sitecore().Placeholder("nav")</div>
+            <div class="main-content col-md-10">@Html.Sitecore().Placeholder("content")</div>
+        </div>
+    </div>
 </body>
 </html>

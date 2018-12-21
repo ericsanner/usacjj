@@ -17,14 +17,14 @@ Languages:
       Hint: __Created
       Value: 20170522T022033Z
     - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
-      Hint: Description
+      Hint: Content
       Value: |
         <ol>
             <li>Left foot <a href="~/link.aspx?_id=38D3C3EC26074034B6F31D5C1CF53B88&amp;_z=z">defensive stance</a></li>
             <li>At the same time
             <ul>
                 <li>Right foot steps forward</li>
-                <li>Right fist swings wide aiming for the head</li>
+                <li>Right fist swings out in a wide arc aiming for the head</li>
             </ul>
             </li>
         </ol>
@@ -33,7 +33,7 @@ Languages:
       Value: Haymaker Punch
     - ID: "6d6e772b-9f30-4b90-acdf-9c610b78d321"
       Hint: Notes
-      Value: This technique is common in bar fights where the attacker is swinging to take your head off your shoulders. &nbsp;If they miss, their momentum will carry them in a circle.
+      Value: This technique is common in bar fights where the attacker is swinging to take your head off your shoulders. &nbsp;If they miss, their momentum will carry them in a circle.&nbsp; It is important to step forward as you punch to mimic the real world scenario correctly.&nbsp; Someone throwing this punch isn't going to leave their punch leg back.
     - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
       Hint: Tags
       Type: Multilist

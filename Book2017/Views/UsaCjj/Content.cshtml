@@ -5,19 +5,19 @@
 
 @if (Model.Title.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    <h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
+	<h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
 }
 
 @if (Model.Content.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    <div class="content-body">
-        @Html.Glass().Editable(x => x.Content)
-    </div>
+	<div class="content-body">
+		@Html.Glass().Editable(x => x.Content)
+	</div>
 }
 @if (Model.Notes.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
 	<div class="content-notes content-basicnotes">
-        <div class="note-title">Notes:</div>
+		<div class="note-title">Notes:</div>
 		@Html.Glass().Editable(x => x.Notes)
 	</div>
 }
@@ -31,26 +31,30 @@
 }
 
 <div class="content-footer">
-    @if (Model.Tags != null || Sitecore.Context.PageMode.IsExperienceEditor)
+	@if (Model.Tags != null || Sitecore.Context.PageMode.IsExperienceEditor)
 	{
 		using (Html.Glass().BeginEditFrame<IContent>(Model, "Edit Tags", x => x.Tags))
 		{
-            <div class="content-tags">
-                <ul>
-                    @foreach (ITag tag in Model.Tags)
+			<div class="content-tags">
+				@if(Sitecore.Context.PageMode.IsExperienceEditor)
+				{
+					<div class="note-title">Tags:</div>
+				}
+				<ul>
+					@foreach (ITag tag in Model.Tags)
 					{
-                        <li>@tag.Name</li>
+						<li>@tag.Name</li>
 					}
-                </ul>
-            </div>
+				</ul>
+			</div>
 		}
 	}
 
-    <div class="content-version">
-        Version: @Model.Version Updated: @Model.Updated.ToString("yyyy-MM-dd")
-    </div>
+	<div class="content-version">
+		Version: @Model.Version Updated: @Model.Updated.ToString("yyyy-MM-dd")
+	</div>
 
-    <div class="content-returnToSection">
-        <a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
-    </div>
+	<div class="content-returnToSection">
+		<a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
+	</div>
 </div>

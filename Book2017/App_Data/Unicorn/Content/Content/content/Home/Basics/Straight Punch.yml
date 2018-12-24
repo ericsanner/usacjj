@@ -1,0 +1,17 @@
+﻿---
+ID: "da831882-3fbe-43ab-baf5-5a636f69b4c9"
+Parent: "0d62902f-2376-44f9-bad4-e9830880544b"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/Basics/Straight Punch
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181224T164602Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Straight Punch

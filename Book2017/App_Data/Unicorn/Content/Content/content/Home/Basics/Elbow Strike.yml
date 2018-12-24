@@ -1,0 +1,17 @@
+﻿---
+ID: "9a439230-66cf-490e-9aa9-82ddd36fcc2f"
+Parent: "0d62902f-2376-44f9-bad4-e9830880544b"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/Basics/Elbow Strike
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181224T164426Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Elbow Strike

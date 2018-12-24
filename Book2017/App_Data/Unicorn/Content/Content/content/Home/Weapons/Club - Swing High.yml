@@ -1,0 +1,23 @@
+﻿---
+ID: "7b330d0d-01eb-4694-a1ae-3c46f9488a38"
+Parent: "c3a060f5-6aa6-43c6-a7e3-167376a1fff4"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: "/sitecore/content/Home/Weapons/Club - Swing High"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181224T170626Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: "Club - Swing High"
+    - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
+      Hint: Tags
+      Type: Multilist
+      Value: |
+        {5883273D-D005-4ED5-97AF-FE345F70390E}
+        {C2516D35-A91C-43A5-8D04-CA99C4A1CCBC}

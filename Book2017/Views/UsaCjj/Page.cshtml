@@ -2,7 +2,7 @@
 @using Sitecore.Links
 @model Book2017.Models.IPage
 
-@if (Model.Title.Trim() != "")
+@if (Model.Title.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
 }

@@ -1,20 +1,26 @@
 ﻿---
-ID: "862b2507-2311-462f-a432-a6759f6b0f7b"
+ID: "7e86a149-2bc0-46ab-8784-0202feb514c0"
 Parent: "b29ee504-861c-492f-95a3-0d890b6fca09"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/User Defined/Content
+Path: /sitecore/templates/User Defined/Tags Folder
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/document_selection.png
+  Value: office/32x32/tags.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: 
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+  Value: |
+    {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{7A89430E-A6B7-4D75-B40F-864B3A3D93B9}"
+  Value: "{A62CF724-03BC-4865-9880-B521171A4163}"
 Languages:
 - Language: en
   Versions:
@@ -22,4 +28,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170522T015104Z
+      Value: 20181224T161832Z

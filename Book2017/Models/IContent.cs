@@ -1,4 +1,6 @@
-﻿using Glass.Mapper.Sc.Configuration.Attributes;
+﻿using Glass.Mapper.Sc.Configuration;
+using Glass.Mapper.Sc.Configuration.Attributes;
+using Sitecore.Data;
 using Sitecore.Data.Items;
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,9 @@ namespace Book2017.Models
 	[SitecoreType(TemplateId = "{862B2507-2311-462F-A432-A6759F6B0F7B}", AutoMap = true)]
 	public interface IContent
 	{
-		Guid ID { get; set; }
+		ID ID { get; set; }
+		[SitecoreInfo(SitecoreInfoType.Path)]
+		string Path { get; set; }
 		string Title { get; set; }
 		string Content { get; set; }
 		string Notes { get; set; }

@@ -3,18 +3,18 @@
 @using Sitecore.Links
 @model Book2017.Models.IContent
 
-@if (Model.Title.Trim() != "")
+@if (Model.Title.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
 }
 
-@if (Model.Content.Trim() != "")
+@if (Model.Content.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <div class="content-body">
         @Html.Glass().Editable(x => x.Content)
     </div>
 }
-@if (Model.Notes.Trim() != "")
+@if (Model.Notes.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
 	<div class="content-notes content-basicnotes">
         <div class="note-title">Notes:</div>
@@ -22,7 +22,7 @@
 	</div>
 }
 
-@if (Model.InstructorNotes.Trim() != "")
+@if (Model.InstructorNotes.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
 	<div class="content-notes content-instructornotes">
 		<div class="note-title">Instructor Notes:</div>
@@ -31,17 +31,20 @@
 }
 
 <div class="content-footer">
-    @if (Model.Tags != null)
-    {
-        <div class="content-tags">
-            <ul>
-                @foreach (ITag tag in Model.Tags)
-                {
-                    <li>@tag.Name</li>
-                }
-            </ul>
-        </div>
-    }
+    @if (Model.Tags != null || Sitecore.Context.PageMode.IsExperienceEditor)
+	{
+		using (Html.Glass().BeginEditFrame<IContent>(Model, "Edit Tags", x => x.Tags))
+		{
+            <div class="content-tags">
+                <ul>
+                    @foreach (ITag tag in Model.Tags)
+					{
+                        <li>@tag.Name</li>
+					}
+                </ul>
+            </div>
+		}
+	}
 
     <div class="content-version">
         Version: @Model.Version Updated: @Model.Updated.ToString("yyyy-MM-dd")

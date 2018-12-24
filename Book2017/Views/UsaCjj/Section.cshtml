@@ -3,12 +3,12 @@
 @using Sitecore.Links
 @model Book2017.Models.ISection
 
-@if (Model.Title.Trim() != "")
+@if (Model.Title.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
 }
 
-@if (Model.Intro.Trim() != "")
+@if (Model.Intro.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <div class="content-body">
         @Html.Glass().Editable(x => x.Intro)

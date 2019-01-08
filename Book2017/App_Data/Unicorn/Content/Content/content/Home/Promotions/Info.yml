@@ -1,0 +1,17 @@
+﻿---
+ID: "ab3dd71f-c704-4138-a734-c27cdcda35f1"
+Parent: "e47bdd65-6f2a-44ec-8f73-193c7713f73c"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/Promotions/Info
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190107T163935Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Promotion Info

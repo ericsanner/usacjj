@@ -1,0 +1,87 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Data.Items
+@using Book2017.Models
+@using Sitecore.Links
+@model Book2017.Models.IPromotion
+
+@if (Model.Title.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+	<h2 class="content-title">@Html.Glass().Editable(x => x.Title)</h2>
+}
+
+@if (Model.Content.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+	<div class="content-body">
+		@Html.Glass().Editable(x => x.Content)
+	</div>
+}
+
+@foreach (var keyValuePair in Model.IncludedItems)
+{
+	if (keyValuePair.Value.Count > 0)
+	{
+		<div class="index-header">
+			@keyValuePair.Key
+		</div>
+		<table class="index-data table-striped">
+			<thead>
+				<tr>
+					<td>Title</td>
+					<td>Section</td>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (Item itm in keyValuePair.Value)
+				{
+					<tr>
+						<td class="item"><a href="@LinkManager.GetItemUrl(itm)">@itm.DisplayName</a></td>
+						<td class="section"><a href="@LinkManager.GetItemUrl(itm.Parent)">@itm.Parent.DisplayName</a></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+	}
+}
+
+@if (Model.Notes.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+	<div class="content-notes content-basicnotes">
+		<div class="note-title">Notes:</div>
+		@Html.Glass().Editable(x => x.Notes)
+	</div>
+}
+
+@if (Model.InstructorNotes.Trim() != "" || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+	<div class="content-notes content-instructornotes">
+		<div class="note-title">Instructor Notes:</div>
+		@Html.Glass().Editable(x => x.InstructorNotes)
+	</div>
+}
+
+<div class="content-footer">
+	@if (Sitecore.Context.PageMode.IsExperienceEditor)
+	{
+		using (Html.Glass().BeginEditFrame<IPromotion>(Model, "Edit Included Tags", x => x.IncludeTags))
+		{
+			<div class="content-tags">
+				<div class="note-title">Included Tags:</div>
+				<ul>
+					@foreach (ITag tag in Model.IncludeTags)
+					{
+						<li>@tag.Name</li>
+					}
+				</ul>
+			</div>
+		}
+	}
+
+	<div class="content-version">
+		Version: @Model.Version Updated: @Model.Updated.ToString("yyyy-MM-dd")
+	</div>
+
+	<div class="content-returnToSection">
+		<a href="@LinkManager.GetItemUrl(Model.Parent)">Back to @Model.Parent.DisplayName</a>
+	</div>
+</div>

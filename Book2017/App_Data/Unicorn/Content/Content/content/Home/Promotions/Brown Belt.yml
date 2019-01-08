@@ -1,0 +1,25 @@
+﻿---
+ID: "6c0027e0-0ec3-4c62-adcd-d5ff865537d8"
+Parent: "e47bdd65-6f2a-44ec-8f73-193c7713f73c"
+Template: "d2311b26-b72b-4900-8a71-0553979d09fe"
+Path: /sitecore/content/Home/Promotions/Brown Belt
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190108T184234Z
+    - ID: "4a621b36-e1b6-42ee-b4f1-9d321b850608"
+      Hint: Include Tags
+      Type: Multilist
+      Value: "{5CBBD5BB-D9E7-48E5-A56D-69F11E7D79FA}"
+    - ID: "4e880ebc-d195-4a9a-a4d5-8bea55785ef9"
+      Hint: Title
+      Value: Brown Belt

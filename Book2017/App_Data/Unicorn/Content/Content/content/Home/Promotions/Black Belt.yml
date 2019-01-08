@@ -1,0 +1,21 @@
+﻿---
+ID: "3a33d7b5-ed73-4f3c-a2b2-7f40c80e010c"
+Parent: "e47bdd65-6f2a-44ec-8f73-193c7713f73c"
+Template: "d2311b26-b72b-4900-8a71-0553979d09fe"
+Path: /sitecore/content/Home/Promotions/Black Belt
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190108T184253Z
+    - ID: "4e880ebc-d195-4a9a-a4d5-8bea55785ef9"
+      Hint: Title
+      Value: Black Belt

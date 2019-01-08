@@ -1,0 +1,25 @@
+﻿---
+ID: "f3359b0a-e32d-46fc-8245-987561863199"
+Parent: "e47bdd65-6f2a-44ec-8f73-193c7713f73c"
+Template: "d2311b26-b72b-4900-8a71-0553979d09fe"
+Path: /sitecore/content/Home/Promotions/Green Belt
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190108T184125Z
+    - ID: "4a621b36-e1b6-42ee-b4f1-9d321b850608"
+      Hint: Include Tags
+      Type: Multilist
+      Value: "{B44830F1-3CFE-4F79-8F11-AFA07C3187F0}"
+    - ID: "4e880ebc-d195-4a9a-a4d5-8bea55785ef9"
+      Hint: Title
+      Value: Green Belt

@@ -58,11 +58,62 @@ namespace Book2017.Controllers
 			return View("~/Views/UsaCjj/Content.cshtml", model);
 		}
 
-        public ActionResult IndexAlphabetical()
+		public ActionResult Promotion()
+		{
+			Item current = SitecoreContext.GetCurrentItem<Item>();
+			IPromotion model = SitecoreContext.GetCurrentItem<IPromotion>();
+
+			model.Version = current.Version.Number;
+			model.Updated = current.Statistics.Updated;
+			model.Parent = current.Parent;
+
+			//Make sure there is work to do
+			if (model.IncludeTags != null)
+			{
+				//create dictionary
+				model.IncludedItems = new Dictionary<string, List<Item>>();
+
+				Item home = SitecoreContext.GetHomeItem<Item>();
+				ChildList sections = home.GetChildren();
+
+				foreach (Item section in sections)
+				{
+					model.IncludedItems.Add(section.DisplayName, new List<Item>());
+				}
+
+				//get database
+				Database database = Sitecore.Configuration.Factory.GetDatabase("web");
+
+				//get items of type content and sort by display name
+				List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").Where(x => x.TemplateID == Constants.Templates.Content).OrderBy(x => x.DisplayName).ToList();				
+
+				//find items that match include tags for the current item
+				foreach (Item itm in allItems)
+				{
+					IContent tmpItm = SitecoreContext.Cast<IContent>(itm);
+					IEnumerable<Guid> tmpTags = tmpItm.Tags?.Select(x => x.ID);
+
+					if (tmpTags != null && tmpTags.Any())
+					{
+						foreach (ITag tag in model.IncludeTags)
+						{
+							if (tmpTags.Contains(tag.ID))
+							{
+								model.IncludedItems[tmpItm.Parent.DisplayName.ToString()].Add(itm);
+							}
+						}
+					}
+				}
+			}
+
+			return View("~/Views/UsaCjj/Promotion.cshtml", model);
+		}
+
+		public ActionResult IndexAlphabetical()
 		{
             //get items
 		    Database database = Sitecore.Configuration.Factory.GetDatabase("web");
-		    List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").OrderBy(x => x.DisplayName).ToList();
+		    List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").Where(x => x.TemplateID != Constants.Templates.Page).OrderBy(x => x.DisplayName).ToList();
 		   
             //create dictionary
             Dictionary<string, List<Item>> dict = new Dictionary<string, List<Item>>();
@@ -71,14 +122,11 @@ namespace Book2017.Controllers
 		    {
 		        dict.Add(((char)i).ToString(), new List<Item>());
             }
-
+			
             //put items into correct location in dictionary
 		    foreach (Item itm in allItems)
 		    {
-		        if (itm.TemplateName != "Page")
-		        {
-		            dict[itm.DisplayName[0].ToString()].Add(itm);
-                }
+				dict[itm.DisplayName[0].ToString()].Add(itm);
 		    }
             
 			return View("~/Views/UsaCjj/IndexContent.cshtml", dict);
@@ -101,7 +149,7 @@ namespace Book2017.Controllers
 
 	            foreach (Item itm in items)
 	            {
-	                if (itm.TemplateName != "Page")
+	                if (itm.TemplateID != Constants.Templates.Page)
 	                {
 	                    dict[section.DisplayName].Add(itm);
 	                }
@@ -120,7 +168,7 @@ namespace Book2017.Controllers
             List<Item> tags = database.SelectItems("/sitecore/Content/Tags/*").OrderBy(x => x.DisplayName).ToList();
 
             //get items
-	        List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").OrderBy(x => x.DisplayName).ToList();
+	        List<Item> allItems = database.SelectItems("/sitecore/Content/Home/*/*").Where(x => x.TemplateID == Constants.Templates.Content).OrderBy(x => x.DisplayName).ToList();
 
 	        //create dictionary
 	        Dictionary<string, List<Item>> dict = new Dictionary<string, List<Item>>();
@@ -132,15 +180,12 @@ namespace Book2017.Controllers
 
 	        //put items into correct location in dictionary
 	        foreach (Item itm in allItems)
-	        {
-	            if (itm.TemplateName != "Page")
+	        {   
+	            IContent contentItem = SitecoreContext.GetItem<IContent>(itm.ID.Guid);
+	            foreach (ITag t in contentItem.Tags)
 	            {
-	                IContent contentItem = SitecoreContext.GetItem<IContent>(itm.ID.Guid);
-	                foreach (ITag t in contentItem.Tags)
-	                {
-	                    dict[t.Name].Add(itm);
-                    }
-	            }
+	                dict[t.Name].Add(itm);
+                }
 	        }
 
             return View("~/Views/UsaCjj/IndexContent.cshtml", dict);
@@ -238,7 +283,7 @@ namespace Book2017.Controllers
                 //section pages
                 foreach (Item itm in items)
 	            {
-	                if (itm.TemplateName != "Page")
+	                if (itm.TemplateID != Constants.Templates.Page)
 	                {
 	                    //create a new page and set our page pointer to the new page
 	                    theDoc.Page = theDoc.AddPage();

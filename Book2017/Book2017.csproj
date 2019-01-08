@@ -211,10 +211,12 @@
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Constants\Templates.cs" />
     <Compile Include="Controllers\UsaCjjController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\IPromotion.cs" />
     <Compile Include="Models\IPage.cs" />
     <Compile Include="Models\Navigation.cs" />
     <Compile Include="Models\ISection.cs" />
@@ -245,6 +247,7 @@
     <Content Include="Views\UsaCjj\IndexContent.cshtml" />
     <Content Include="Views\UsaCjj\Page.cshtml" />
     <Content Include="Views\UsaCjj\Print.cshtml" />
+    <Content Include="Views\UsaCjj\Promotion.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

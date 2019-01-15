@@ -291,10 +291,18 @@ namespace Book2017.Controllers
                         //track which page we are starting on
 	                    contentStartPage = theDoc.PageNumber;
 
-                        //get item as IContent
-                        IContent contentItem = SitecoreContext.GetItem<IContent>(itm.ID.Guid);
+                        //get item 
+                        dynamic contentItem;
+                        if (itm.TemplateID == Constants.Templates.Promotion)
+                        {
+                            contentItem = SitecoreContext.GetItem<IPromotion>(itm.ID.Guid);
+                        }
+                        else
+                        {
+                            contentItem = SitecoreContext.GetItem<IContent>(itm.ID.Guid);
+                        }
 
-	                    contentItem.Version = itm.Version.Number;
+                        contentItem.Version = itm.Version.Number;
 	                    contentItem.Updated = itm.Statistics.Updated;
 	                    contentItem.Parent = itm.Parent;
                         
@@ -316,12 +324,12 @@ namespace Book2017.Controllers
 
                         //content
                         content = "<p>" + contentItem.Content + "</p>";
-                        if (!contentItem.Notes.IsEmptyOrNull())
+                        if (!String.IsNullOrEmpty(contentItem.Notes))
                         {
                             content += "<p>Notes:<br />" + contentItem.Notes + "</p>";
                         }
 
-                        if (!contentItem.InstructorNotes.IsEmptyOrNull())
+                        if (!String.IsNullOrEmpty(contentItem.InstructorNotes))
                         {
                             content += "<p>Instructor Notes:<br />" + contentItem.Notes + "</p>";
                         }
@@ -342,7 +350,7 @@ namespace Book2017.Controllers
                         contentEndPage = theDoc.PageCount;
 
 	                    //add tags to last page
-                        if (contentItem.Tags.Any())
+                        if (itm.TemplateID == Constants.Templates.Content && contentItem.Tags != null && contentItem.Tags.Count > 0)
 	                    {
 	                        List<string> tags = new List<string>();
 

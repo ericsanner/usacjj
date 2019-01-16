@@ -16,20 +16,28 @@ Languages:
       Hint: Content
       Value: |
         <ol>
-            <li>Person A&nbsp;right hand <a href="~/link.aspx?_id=F0C22340F6EC41F29A2EC1D59841D606&amp;_z=z">haymaker punch</a></li>
+            <li>Attacker right hand <a href="~/link.aspx?_id=F0C22340F6EC41F29A2EC1D59841D606&amp;_z=z">haymaker punch</a></li>
             <li>At the same time
-            <ol>
+            <ul>
                 <li>Left hand <a href="~/link.aspx?_id=308BC1B5F0A147A6B14868CF61411208&amp;_z=z">block and grab</a></li>
-                <li>Step foward with right foot and pivot body 180 degrees landing with right foot to inside of Person A right foot and back to Person A chest</li>
-                <li>Pop right shoulder under Person A right armpit
+            </ul>
+            <ul>
+                <li>Step foward with right foot and pivot body 180 degrees landing with right foot to inside of Attacker right foot and back to Attacker chest</li>
+            </ul>
+            <ul>
+                <li>Pop right shoulder under Attacker right armpit
                 <ol>
-                    <li>&nbsp;if you are taller than Person A use your bicep</li>
+                    <li>&nbsp;if you are taller than Attacker use your bicep</li>
                 </ol>
                 </li>
-            </ol>
+            </ul>
             </li>
-            <li>Pull left foot back in circle to take Person A down to the ground</li>
-            <li>Person A lands on left side</li>
+            <li>Pull left foot back in circle to take Attacker down to the ground
+            <ul>
+                <li>Keeping shoulders over hips</li>
+            </ul>
+            </li>
+            <li>Attacker lands on left side</li>
         </ol>
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title

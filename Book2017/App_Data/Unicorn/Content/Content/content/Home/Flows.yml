@@ -1,0 +1,21 @@
+﻿---
+ID: "dcd6bef1-15b6-4643-b261-6ed689ad07a7"
+Parent: "110d559f-dea5-42ea-9c1c-8a5df7e70ef9"
+Template: "8c4b093f-4c46-4f85-b066-febe01254a1f"
+Path: /sitecore/content/Home/Flows
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "22b97c4a-26f5-4825-b73f-a0b006bc8b95"
+      Hint: Title
+      Value: Flows
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190116T015252Z

@@ -1,0 +1,21 @@
+﻿---
+ID: "1050a23a-d90d-418e-8d2d-1f4c34b27fc9"
+Parent: "dcd6bef1-15b6-4643-b261-6ed689ad07a7"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: "/sitecore/content/Home/Flows/Block-and-Grab-BodyDrop-ArmHug"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "Block and Grab - Body Drop - Arm Hug"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190116T015343Z
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: "Block and Grab - Body Drop - Arm Hug"

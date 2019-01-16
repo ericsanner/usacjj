@@ -12,9 +12,31 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170522T023735Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Content
+      Value: |
+        <ol>
+            <li>Person A Right Hand <a href="~/link.aspx?_id=F0C22340F6EC41F29A2EC1D59841D606&amp;_z=z">Haymaker Punch</a></li>
+            <li>Person B Left Hand <a href="~/link.aspx?_id=4AFBDF577BA545B58E15474F26D35E7E&amp;_z=z">Knifehand</a> Block
+            <ul>
+                <li>&nbsp;North of Person A Right Wrist about 1 - 4 inches</li>
+            </ul>
+            </li>
+            <li>&nbsp;Person B Left Hand grab Person A Right Arm
+            <ul>
+                <li>Keep thumb next to index finger when grabbing</li>
+            </ul>
+            </li>
+        </ol>
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
       Value: Block and Grab
+    - ID: "6d6e772b-9f30-4b90-acdf-9c610b78d321"
+      Hint: Notes
+      Value: |
+        <ul>
+            <li>A strong knifehand block can cause Person A hand to open slightly, lessening the potential damage caused if their fist makes contact with you</li>
+        </ul>
     - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
       Hint: Tags
       Type: Multilist

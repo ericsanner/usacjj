@@ -1,0 +1,113 @@
+﻿---
+ID: "ecbb53c5-e42d-48b1-bcef-8514121f232c"
+Parent: "93a2842a-9c64-45b1-8ebc-ba92cfe46deb"
+Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
+Path: /sitecore/content/Home/Getting Started/Concepts
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190118T012223Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Content
+      Value: |
+        <p>&nbsp;Awareness&nbsp;</p>
+        <ul>
+            <li>The state of being aware or conscious</li>
+            <li>Always be aware of your surroundings
+            <ul>
+                <li>This can help you avoid getting into a bad situation in the first place</li>
+            </ul>
+            </li>
+            <li>Examples
+            <ul>
+                <li>Walk furthest away from bushes, corners of buildings, alcoves, areas where someone could hide and jump out at or behind you.</li>
+                <li>The people around you in line checking out at a store.&nbsp; The person behind you could be waiting to rob the place.</li>
+            </ul>
+            </li>
+        </ul>
+        <p>Balance</p>
+        <ul>
+            <li>A state of equilibrium; equal distribution of weight</li>
+            <li>We have to be on balance to do our techniques
+            <ul>
+                <li>The only thing you can do if you are off balance is move to gain your balance.&nbsp; That could be all the time someone needs to attack you.</li>
+            </ul>
+            </li>
+        </ul>
+        <p>Blocks are Strikes</p>
+        <ul>
+            <li>Block = To cause an obstruction</li>
+            <li>Strike = To deal an attack</li>
+            <li>We use blocks to stop an incoming attack</li>
+            <li>Our blocks are strong enough to also be an attack
+            <ul>
+                <li>&nbsp;Blocking on a nerve cluster can cause punches to soften or grabs to release</li>
+            </ul>
+            </li>
+        </ul>
+        <p>Body Position</p>
+        <ul>
+            <li>Being aware of how your body is oriented in space as you move to allow you to stay on balance</li>
+            <li>This generally involves keeping your shoulders over your hips and staying in a good stance</li>
+        </ul>
+        <p>Breathing</p>
+        <ul>
+            <li>The act of respiration</li>
+        </ul>
+        <p>Circles</p>
+        <ul>
+            <li>We use circular motions as we manipulate our opponents</li>
+            <li>This allows us to redirect opponents momentum instead of absorbing it</li>
+        </ul>
+        <p>Closeness</p>
+        <ul>
+            <li>We have to be near our opponent to manipulate them</li>
+        </ul>
+        <p>Confidence</p>
+        <ul>
+            <li>Belief in one's self and abilities</li>
+            <li>If you are not confident that you can defend yourself, you will freeze up in a real life situation</li>
+        </ul>
+        <p>Element of Surprise</p>
+        <ul>
+            <li></li>
+        </ul>
+        <p>Explosiveness</p>
+        <ul>
+            <li>To expand with force and speed</li>
+        </ul>
+        <p>Leverage</p>
+        <ul>
+            <li>Mechanical advantage that requires less strength to move an object</li>
+        </ul>
+        <p>Momentum</p>
+        <ul>
+            <li>Force or speed of movement</li>
+        </ul>
+        <p>&nbsp;Muscle Memory</p>
+        <p>Precision and Accuracy</p>
+        <ul>
+            <li>Precision = Exact (correct)</li>
+            <li>Accurate = Consistent (same)</li>
+            <li>You can be precise without being accurate if you occasionally hit the correct spot</li>
+            <li>You can be accurate without being precise if your consistently hit the incorrect spot</li>
+            <li>We want to be both precise and accurate by hitting the correct spot consistently</li>
+        </ul>
+        <p>Reversal of Momentum</p>
+        <ul>
+            <li>Accepting the incoming momentum and reversing the direction 180 degrees</li>
+        </ul>
+        <p>Situational</p>
+        <ul>
+            <li>Combination of circumstances</li>
+            <li>We practice in a controlled environment. Whatever we encounter on the street will likely not be exactly what we have practiced.</li>
+            <li>We must be able to adapt, read the situation without thinking, and react in an appropriate way to escape the attack.</li>
+        </ul>
+    - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
+      Hint: Title
+      Value: Concepts

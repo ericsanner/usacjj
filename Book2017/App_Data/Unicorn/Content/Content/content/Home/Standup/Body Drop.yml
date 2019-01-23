@@ -15,9 +15,10 @@ Languages:
     - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
       Hint: Content
       Value: |
-        <ol>
+        <ul>
             <li>Attacker right hand <a href="~/link.aspx?_id=F0C22340F6EC41F29A2EC1D59841D606&amp;_z=z">haymaker punch</a></li>
-            <li>At the same time
+            <li>At the same time</li>
+            <li>
             <ul>
                 <li>Left hand <a href="~/link.aspx?_id=308BC1B5F0A147A6B14868CF61411208&amp;_z=z">block and grab</a></li>
             </ul>
@@ -26,9 +27,9 @@ Languages:
             </ul>
             <ul>
                 <li>Pop right shoulder under Attacker right armpit
-                <ol>
-                    <li>&nbsp;if you are taller than Attacker use your bicep</li>
-                </ol>
+                <ul>
+                    <li>&nbsp;If you are taller than Attacker use your bicep</li>
+                </ul>
                 </li>
             </ul>
             </li>
@@ -38,7 +39,7 @@ Languages:
             </ul>
             </li>
             <li>Attacker lands on left side</li>
-        </ol>
+        </ul>
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
       Value: Body Drop

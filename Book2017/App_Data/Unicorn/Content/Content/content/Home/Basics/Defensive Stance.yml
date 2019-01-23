@@ -7,7 +7,7 @@ DB: master
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: "-100"
+  Value: 450
 Languages:
 - Language: en
   Versions:
@@ -19,7 +19,7 @@ Languages:
     - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
       Hint: Content
       Value: |
-        <ol>
+        <ul>
             <li>Fists by chin guarding face</li>
             <li>Shoulders over hips</li>
             <li>Feet shoulder width apart</li>
@@ -37,7 +37,7 @@ Languages:
                 <li>Mobility</li>
             </ul>
             </li>
-        </ol>
+        </ul>
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
       Value: Defensive Stance

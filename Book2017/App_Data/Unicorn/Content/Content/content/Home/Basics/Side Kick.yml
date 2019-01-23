@@ -4,6 +4,10 @@ Parent: "0d62902f-2376-44f9-bad4-e9830880544b"
 Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
 Path: /sitecore/content/Home/Basics/Side Kick
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1900
 Languages:
 - Language: en
   Versions:
@@ -12,9 +16,164 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170811T183126Z
+    - ID: "2f311dec-578c-444a-a4bd-ba05a74e9c2f"
+      Hint: Content
+      Value: |
+        <p><span style="text-decoration: underline;">#1 Front Leg Side Kick</span></p>
+        <ul>
+            <li>Left defensive stance</li>
+            <li>Pivot right foot toes out
+            <ul>
+                <li>&nbsp;This takes the turn out of the step so you do not damage your knee or fall</li>
+            </ul>
+            </li>
+            <li>Pick up your left foot and bring it to your chest
+            <ul>
+                <li>Point your butt the direction you want to kick</li>
+            </ul>
+            </li>
+            <li>Push left foot straight out to kick
+            <ul>
+                <li>Hip rotates down</li>
+                <li>Toes are lower than heel</li>
+                <li>Strike with heel and outside edge of the foot (razor edge)</li>
+                <li>Stand up as straight as possible</li>
+                <li>Hands up guarding face</li>
+            </ul>
+            </li>
+            <li>Pull left foot back to chest
+            <ul>
+                <li>Maintain balance</li>
+            </ul>
+            </li>
+            <li>Step down
+            <ul>
+                <li>Controlled and on balance</li>
+                <li>Towards target to close distance</li>
+            </ul>
+            </li>
+        </ul>
+        <p><span style="text-decoration: underline;">#2 Back Leg Side Kick</span></p>
+        <ul>
+            <li>Left defensive stance</li>
+            <li>Pivot left foot toes out
+            <ul>
+                <li>&nbsp;This takes the turn out of the step so you do not damage your knee or fall</li>
+            </ul>
+            </li>
+            <li>Pick up your right foot and bring it to your chest
+            <ul>
+                <li>Point your butt the direction you want to kick</li>
+            </ul>
+            </li>
+            <li>Push right foot straight out to kick
+            <ul>
+                <li>Hip rotates down</li>
+                <li>Toes are lower than heel</li>
+                <li>Strike with heel and outside edge of the foot (razor edge)</li>
+                <li>Stand up as straight as possible</li>
+                <li>Hands up guarding face</li>
+            </ul>
+            </li>
+            <li>Pull right foot back to chest
+            <ul>
+                <li>Maintain balance</li>
+            </ul>
+            </li>
+            <li>Step down
+            <ul>
+                <li>Controlled and on balance</li>
+                <li>Towards target to close distance</li>
+            </ul>
+            </li>
+        </ul>
+        <p><span style="text-decoration: underline;">#3 Step Side Kick</span></p>
+        <ul>
+            <li>Left defensive stance</li>
+            <li>Step right foot behind left foot
+            <ul>
+                <li>Point your butt the direction you want to kick</li>
+            </ul>
+            </li>
+            <li>Pick up your left foot and bring it to your chest</li>
+            <li>Push left foot straight out to kick
+            <ul>
+                <li>Hip rotates down</li>
+                <li>Toes are lower than heel</li>
+                <li>Strike with heel and outside edge of the foot (razor edge)</li>
+                <li>Stand up as straight as possible</li>
+                <li>Hands up guarding face</li>
+            </ul>
+            </li>
+            <li>Pull left foot back to chest
+            <ul>
+                <li>Maintain balance</li>
+            </ul>
+            </li>
+            <li>Step down
+            <ul>
+                <li>Controlled and on balance</li>
+                <li>Towards target to close distance</li>
+            </ul>
+            </li>
+        </ul>
+        <p><span style="text-decoration: underline;">#4 Shuffle Side Kick</span></p>
+        <ul>
+            <li>Left defensive stance</li>
+            <li>At the same time
+            <ul>
+                <li>Push off right foot hopping to replace left foot on the ground
+                <ul>
+                    <li>Use the hop to control your distance and close the gap between you and your opponent</li>
+                </ul>
+                </li>
+                <li>Pick up your left foot and bring it to your chest<br />
+                <ul>
+                    <li>Point your butt the direction you want to kick</li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li>Push left foot straight out to kick
+            <ul>
+                <li>Hip rotates down</li>
+                <li>Toes are lower than heel</li>
+                <li>Strike with heel and outside edge of the foot (razor edge)</li>
+                <li>Stand up as straight as possible</li>
+                <li>Hands up guarding face</li>
+            </ul>
+            </li>
+            <li>Pull left foot back to chest
+            <ul>
+                <li>Maintain balance</li>
+            </ul>
+            </li>
+            <li>Step down
+            <ul>
+                <li>Controlled and on balance</li>
+                <li>Towards target to close distance</li>
+            </ul>
+            </li>
+        </ul>
     - ID: "3d9692bd-2127-432d-9fcc-3e7417cb06be"
       Hint: Title
       Value: Side Kick
+    - ID: "6d6e772b-9f30-4b90-acdf-9c610b78d321"
+      Hint: Notes
+      Value: |
+        <ul>
+            <li>The side kick has a large amount of power behind it</li>
+            <li>The kick comes straight out from your hip and straight back</li>
+            <li>Targets
+            <ul>
+                <li>Stomach</li>
+                <li>Hip&nbsp;</li>
+                <li>Knee</li>
+                <li>Thigh</li>
+                <li>Shin</li>
+            </ul>
+            </li>
+        </ul>
     - ID: "9ed7933a-0033-41cb-91c0-fd2884445631"
       Hint: Tags
       Type: Multilist
@@ -22,3 +181,14 @@ Languages:
         {4FF90F57-EF3F-4CBE-878C-5FECF1CB5039}
         {072D4265-EE76-4CBB-9DB1-145BEDBCF740}
         {1BEC36FE-BBC9-423E-9757-7408A9BA9C4A}
+    - ID: "a5eeb78a-5c8f-4575-8cbb-769642b19dd8"
+      Hint: Instructor Notes
+      Value: |
+        <ul>
+            <li>The #3 Step Side Kick is the easiest to teach to beginners
+            <ul>
+                <li>It automatically puts your body in the right position to maximize the power in the kick</li>
+            </ul>
+            </li>
+            <li>The #4 Shuffle Side Kick can be used to close a long distance between you and your opponent.&nbsp; You may be able to stop an altercation with just this kick before it starts.</li>
+        </ul>

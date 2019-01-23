@@ -4,6 +4,10 @@ Parent: "0d62902f-2376-44f9-bad4-e9830880544b"
 Template: "862b2507-2311-462f-a432-a6759f6b0f7b"
 Path: /sitecore/content/Home/Basics/Drop Stance
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
 Languages:
 - Language: en
   Versions:
